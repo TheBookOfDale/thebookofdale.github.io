@@ -1,0 +1,25 @@
+homepage-highlights:
+  - image_path: /assets/images/powerbi-thumb.png
+    title: Power BI Dashboards
+    excerpt: Interactive visuals that drive operational clarity and strategic decisions
+    url: /projects/powerbi-dashboard/
+
+  - image_path: /assets/images/systems-thumb.png
+    title: MES & ERP Stewardship
+    excerpt: Reliable system administration and integration across manufacturing and enterprise platforms
+    url: /projects/systems/
+
+  - image_path: /assets/images/enablement-thumb.png
+    title: User Enablement
+    excerpt: Empowering teams through training, documentation, and cross-functional support
+    url: /about/
+
+  - image_path: /assets/images/resume-thumb.png
+    title: Resume
+    excerpt: Strategic leadership in analytics, systems, and operational transformation
+    url: /resume/
+
+  - image_path: /assets/images/blog-thumb.png
+    title: Blog
+    excerpt: Insights on leadership, enablement, and continuous improvement
+    url: /posts/
