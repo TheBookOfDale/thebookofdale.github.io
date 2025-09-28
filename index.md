@@ -21,7 +21,5 @@ Explore my portfolio to see how I:
 - Enable teams through training, integration, and clear communication  
 - Refine mission, values, and vision to reflect evolving responsibilities
 
----
-
 {% include feature_row %}
 This is a test below the feature row.
