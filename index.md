@@ -24,3 +24,4 @@ Explore my portfolio to see how I:
 ---
 
 {% include feature_row id="homepage-highlights" %}
+This is a test below the feature row.
