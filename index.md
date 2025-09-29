@@ -2,12 +2,12 @@
 layout: page
 title: "Welcome"
 permalink: /
-header:
-  overlay_color: "#000"
-  overlay_filter: "0.3"
-  overlay_image: /assets/images/header-background.jpg
-  caption: "Empowering teams through data, systems, and clarity"
-excerpt: "Strategic leader in analytics and operational systems · Power BI · MES/ERP · Enablement"
+# header:
+#   overlay_color: "#000"
+#   overlay_filter: "0.3"
+#   overlay_image: /assets/images/header-background.jpg
+#   caption: "Empowering teams through data, systems, and clarity"
+# excerpt: "Strategic leader in analytics and operational systems · Power BI · MES/ERP · Enablement"
 ---
 
 # 👋 Hi, I'm Christopher Dale
