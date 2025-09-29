@@ -1,11 +1,26 @@
-remote_theme: mmistakes/minimal-mistakes
-minimal_mistakes_skin: default
-
 title: "Christopher Dale"
-name: "Christopher Dale"
-description: "Strategic leader in analytics and operational systems"
+tagline: "Strategic leader in analytics and operational systems"
+description: "Empowering teams through data, systems, and clarity"
 url: "https://thebookofdale.github.io"
 baseurl: "" # leave blank for user site
 
-plugins:
-  - jekyll-remote-theme
+theme: jekyll-theme-chirpy
+lang: en
+timezone: America/New_York
+
+theme_mode: light # options: light, dark, auto
+
+# Social links (optional)
+github:
+  username: thebookofdale
+linkedin:
+  username: christopherdale
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Enable these only if you want to customize further
+# plugins:
+#   - jekyll-feed
+#   - jekyll-seo-tag
