@@ -14,5 +14,3 @@ Explore my portfolio to see how I:
 - Steward MES, ERP, and timekeeping platforms with precision  
 - Enable teams through training, integration, and clear communication  
 - Refine mission, values, and vision to reflect evolving responsibilities
-
-This is a test below the feature row.
