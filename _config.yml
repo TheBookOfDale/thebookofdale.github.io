@@ -10,6 +10,10 @@ timezone: America/New_York
 
 theme_mode: light # options: light, dark, auto
 
+avatar:
+  enabled: true
+  url: /assets/images/profile.jpg
+
 # Social links (optional)
 github:
   username: thebookofdale
@@ -19,6 +23,10 @@ linkedin:
 # Build settings
 markdown: kramdown
 highlighter: rouge
+
+collections:
+  tabs:
+    output: true
 
 # Enable these only if you want to customize further
 # plugins:

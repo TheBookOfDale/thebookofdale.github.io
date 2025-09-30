@@ -1,7 +1,7 @@
 ---
-title: Welcome
+layout: home
 icon: fas fa-home
-order: 1
+order: 0
 ---
 
 # 👋 Hi, I'm Christopher Dale
