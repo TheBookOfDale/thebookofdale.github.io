@@ -27,4 +27,4 @@ I believe in clarity, empowerment, and continuous improvement. I build data-lite
 
 ## Let’s Connect
 
-Explore my [GitHub](https://github.com/thebookofdale) or [LinkedIn](https://www.linkedin.com/in/christopherdale). I’m always open to conversations around analytics, systems architecture, and team development.
+Explore my [GitHub](https://github.com/thebookofdale) or [LinkedIn](https://www.linkedin.com/in/christopher-d-dale). I’m always open to conversations around analytics, systems architecture, and team development.
