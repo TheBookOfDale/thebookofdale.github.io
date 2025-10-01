@@ -1,8 +1,30 @@
 ---
-# the default layout is 'page'
+layout: page
+title: About
 icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+## Who I Am
+
+I'm Christopher Dale—a strategic leader in analytics and operational systems. I empower teams through data, systems, and clarity, blending technical rigor with a human-centered approach.
+
+## What I Do
+
+As Manager of Data Analytics & Operational Systems at SRCTec, I lead a team responsible for advanced analytics, MES/ERP/timekeeping system administration, user enablement, and integration management.
+
+## Core Capabilities
+
+- Power BI, SQL, and process automation  
+- MES/ERP/timekeeping platform stewardship  
+- System integration and reconciliation  
+- Technical web development (Jekyll, GitHub Pages, Markdown)  
+- User enablement and cross-functional training  
+
+## How I Lead
+
+I believe in clarity, empowerment, and continuous improvement. I build data-literate teams, architect scalable systems, and foster a culture of strategic enablement.
+
+## Let’s Connect
+
+Explore my [GitHub](https://github.com/thebookofdale) or [LinkedIn](https://www.linkedin.com/in/christopherdale). I’m always open to conversations around analytics, systems architecture, and team development.
