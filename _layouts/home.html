@@ -10,6 +10,11 @@ refactor: true
 
 {% assign posts = '' | split: '' %}
 
+<!-- Optional intro content -->
+<div class="page-content">
+  {{ content }}
+</div>
+
 <!-- Get pinned posts on current page -->
 
 {% assign visible_start = paginator.page | minus: 1 | times: paginator.per_page %}

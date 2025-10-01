@@ -1,6 +1,7 @@
 ---
-title: Power BI Bookmarks: Driving Interactive Storytelling
-date: 2025-10-01 13:30:00 -0400
+layout: page
+title: "Power BI Bookmarks: Driving Interactive Storytelling"
+date: 2025-10-01 12:30:00 -0400
 categories: [Analytics, Power BI]
 tags: [Power BI, Bookmarks, UX, Storytelling]
 pin: true
