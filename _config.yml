@@ -30,6 +30,7 @@ collections:
     output: true
 
 # Enable these only if you want to customize further
-# plugins:
+plugins:
+    - jekyll-remote-theme
 #   - jekyll-feed
 #   - jekyll-seo-tag
