@@ -4,6 +4,7 @@ title: About
 icon: fas fa-info-circle
 order: 4
 show_profile: true
+permalink: /about/
 ---
 
 ## Who I Am
