@@ -1,10 +1,11 @@
 ---
-layout: page
+layout: post
 title: "Power BI Bookmarks: Driving Interactive Storytelling"
-date: 2025-10-01 12:30:00 -0400
+date: 2025-10-02 12:30:00 -0400
 categories: [Analytics, Power BI]
 tags: [Power BI, Bookmarks, UX, Storytelling]
-pin: true
+pin: false
+comments: true
 image:
   path: /assets/images/bookmarks-thumb.png
   alt: Power BI Bookmarks demo thumbnail
