@@ -12,11 +12,20 @@ image:
   alt: Power BI theme JSON with branded colors
 ---
 
-# Creating a Custom Power BI Theme: Aligning Reports with Your Brand
+One of the fastest ways to elevate the professionalism of your Power BI reports is by applying a **custom theme**. A theme ensures that every chart, KPI card, and table reflects your organization’s identity — from the color palette to the typography — creating consistency and credibility across reports.  
 
-One of the fastest ways to elevate the professionalism of your Power BI reports is by applying a **custom theme**. Themes ensure that every chart, KPI card, and table reflects your organization’s identity — from the color palette to the typography.  
+👉 Microsoft provides a detailed guide on [using and importing custom report theme files](https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-report-themes#import-custom-report-theme-files). In Power BI Desktop, you’ll find these options under **View → Themes**, where you can select a built‑in theme, customize the current one, or import your own JSON file.  
 
-In this post, I’ll walk through the process of creating a theme file in Power BI, using **Contoso Manufacturing** as an example.
+In this post, I’ll show you how to build a custom theme from scratch — using **Contoso Manufacturing** as an example — so your reports align seamlessly with your brand.
+
+---
+
+## 📐 Step 0: Align with Your Brand Standards
+
+Before you define colors yourself, check if your company’s **marketing or design team** already has brand guidelines.  
+- Many organizations maintain official palettes, typography rules, and accessibility standards.  
+- Using these ensures your reports match the same look and feel as presentations, websites, and customer‑facing materials.  
+- If you can get the official hex codes and fonts, you’ll save time and guarantee consistency.
 
 ---
 
@@ -53,7 +62,8 @@ Divergent scale: Orange → Gray → Green.
 
 Here’s a simplified JSON snippet:
 
-```json
+```json 
+{: file="contoso-theme.json" }
 {
   "name": "Contoso Manufacturing",
   "dataColors": [
@@ -74,6 +84,7 @@ Here’s a simplified JSON snippet:
   "foreground": "#333333",
   "tableAccent": "#2F4F6F"
 }
+```
 
 ---
 
