@@ -20,9 +20,11 @@ One of the fastest ways to elevate the professionalism of your Power BI reports 
 
 In this post, I’ll show you how to build a custom theme from scratch — using **Contoso Manufacturing** as an example — so your reports align seamlessly with your brand.
 
+If you haven’t already, start by [establishing report templates](/posts/power-bi-report-templates/) to give your team a consistent reporting framework.
+
 ---
 
-## 📐 Step 0: Align with Your Brand Standards
+## 📐 Step 0 — Align Power BI Themes with Brand Standards
 
 Before you define colors yourself, check if your company’s **marketing or design team** already has brand guidelines.  
 - Many organizations maintain official palettes, typography rules, and accessibility standards.  
@@ -31,7 +33,7 @@ Before you define colors yourself, check if your company’s **marketing or desi
 
 ---
 
-## 🧭 Step 1 — Navigate to the Customize Theme Screen in Power BI Desktop
+## 🧭 Step 1 — Open the Power BI Customize Theme Dialog
 
 <figure class="float-end ms-3 mb-3" style="max-width:300px;">
   <img src="/assets/images/customize-current-theme.png"
@@ -57,7 +59,7 @@ This opens the **Customize theme** dialog box. From here you can adjust colors, 
 
 ---
 
-## 🎨 Step 2 — Define Your Color Palette
+## 🎨 Step 2 — Define Your Power BI Theme Color Palette
 
 <figure class="float-end ms-3 mb-3" style="max-width:300px;">
   <img src="/assets/images/customize-theme-colors.png"
@@ -83,7 +85,7 @@ Start by identifying the **8 base colors** that will cycle through visuals. For 
 
 ---
 
-## 🖌️ Step 3 — Add Sentiment and Divergent Colors
+## 🖌️ Step 3 — Configure Sentiment and Divergent Colors in Power BI
 
 <figure class="float-end ms-3 mb-3" style="max-width:300px;">
   <img src="/assets/images/customize-sen-div-colors.png"
@@ -106,7 +108,7 @@ Divergent scale: Orange → Gray → Green.
 
 ---
 
-## ✒️ Step 4 — Customize Text Styles
+## ✒️ Step 4 — Customize Power BI Theme Fonts and Text
 
 In the **Text** tab of the Customize Theme dialog, you can set defaults for all the typography in your report. This ensures consistency across visuals without manually formatting each one.
 
@@ -120,7 +122,7 @@ For Contoso Manufacturing, we chose **Segoe UI** (to align with Microsoft brandi
 
 ---
 
-## 📊 Step 5 — Adjust Visual Defaults
+## 📊 Step 5 — Set Default Visual Styles in Power BI
 
 The **Visuals** tab lets you define how different chart types and objects should look by default. This is powerful because it saves your team from repetitive formatting.
 
@@ -134,7 +136,7 @@ By setting these once in the theme, every new visual inherits the same polished 
 
 ---
 
-## 🖼️ Step 6 — Set Page Backgrounds
+## 🖼️ Step 6 — Configure Power BI Page Backgrounds
 
 Finally, the **Page** tab controls the canvas itself:
 - **Background color** — the default fill behind visuals.  
@@ -143,11 +145,13 @@ Finally, the **Page** tab controls the canvas itself:
 
 For Contoso, we kept the background white (`#FFFFFF`) for clarity, but added a subtle gray wallpaper with 5% transparency to give reports a professional, branded feel without distracting from the data.
 
+For more advanced layouts, you can [design custom backgrounds and icons in PowerPoint](/posts/power-bi-backgrounds-icons/) and apply them instead of or in addition to what is set here.
+
 > 💡 **Tip:** Keep page backgrounds subtle. High‑contrast or busy images can make charts hard to read.
 
 ---
 
-## 🔍 Step 7 — Style the Filter Pane
+## 🔍 Step 7 — Customize the Power BI Filter Pane
 
 The **Filter Pane** is where users interact with report filters, so it deserves the same branding attention as visuals and text.
 
@@ -164,7 +168,7 @@ For Contoso Manufacturing, we used a light gray background with dark gray text, 
 
 ---
 
-## 💾 Step 8 — Export and Refine the JSON Theme File
+## 💾 Step 8 — Export and Edit the Power BI Theme JSON
 
 Once you’ve finished experimenting in the Customize Theme dialog, you can export your settings to a JSON file. This gives you full control and makes your theme portable.
 
@@ -178,7 +182,7 @@ Here you can refine details beyond what the UI exposes — for example, adding c
 
 ---
 
-## 📥 Step 9 — Import the Theme into Power BI
+## 📥 Step 9 — Import Your Custom Power BI Theme
 
 After refining your JSON, bring it back into Power BI:
 
@@ -190,7 +194,7 @@ This step closes the loop: you’ve gone from UI → JSON → back into Power BI
 
 ---
 
-## 🌐 Step 10 — Apply Consistently Across Reports
+## 🌐 Step 10 — Apply Power BI Themes Consistently
 
 A theme only delivers value if it’s used consistently. To embed it into your team’s workflow:
 
@@ -201,9 +205,11 @@ A theme only delivers value if it’s used consistently. To embed it into your t
 
 By applying the theme across all reports, you ensure every dashboard feels like part of the same brand story — professional, consistent, and credible.
 
+Once your theme is in place, you can enhance interactivity by [using Power BI Bookmarks for storytelling and navigation](/posts/power-bi-bookmarks/)
+
 ---
 
-## 📝 Step 11 — Example JSON Theme File
+## 📝 Step 11 — Example Power BI JSON Theme File
 
 Here’s a simplified JSON snippet:
 
@@ -240,10 +246,72 @@ A custom Power BI theme is more than a design choice — it’s a leadership mov
 
 ---
 
-## 🔗 Series: Team Enablement & Branding
+## ❓ Frequently Asked Questions about Power BI Themes
 
-- [Establishing Report Templates: Building Team Identity from Day One](/posts/report-templates/)
-- [Creating a Custom Power BI Theme: Aligning Reports with Your Brand](/posts/power-bi-theme/) ← *You are here*
-- [Designing Power BI Backgrounds and Icons with PowerPoint](/posts/power-bi-report-objects/)
+### What is a Power BI theme?
+A theme is a JSON file that defines report colors, fonts, and formatting defaults, ensuring consistent branding across visuals.
+
+### How do I create a custom Power BI theme?
+Use the **Customize Theme** dialog in Power BI Desktop, then export and refine the JSON file for advanced control.
+
+### Can I share a theme across multiple reports?
+Yes. Once exported, a theme JSON can be imported into any report to maintain a unified look.
+
+### How do I style the filter pane in Power BI?
+In the **Customize Theme → Filter Pane** section, you can set background, text, and card styles for available and applied filters.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a Power BI theme?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Power BI theme is a JSON file that defines report colors, fonts, and formatting defaults. Applying a theme ensures consistency across visuals and aligns reports with your brand identity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I create a custom Power BI theme?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can create a custom theme by using the Customize Theme dialog in Power BI Desktop, then exporting it as JSON. This JSON can be refined manually and re‑imported into other reports."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I apply the same theme across multiple reports?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Once you’ve exported your theme JSON, you can import it into any report. This ensures all dashboards share the same look and feel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What’s the difference between built‑in themes and custom themes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Built‑in themes are pre‑packaged color palettes provided by Microsoft. Custom themes let you define your own colors, fonts, and visual defaults to match your organization’s branding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I style the filter pane in Power BI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the Customize Theme → Filter Pane section, you can set background, text, and card styles for available and applied filters. These settings can also be exported into your JSON theme file."
+      }
+    }
+  ]
+}
+</script>
 
 ---
+## 🔗 Series: Team Enablement & Branding
+
+- [Power BI Report Templates: Why Standardization Matters for Teams](/posts/power-bi-report-templates/)
+- [Creating a Custom Power BI Theme: Aligning Reports with Your Brand](/posts/power-bi-custom-theme/) ← *You are here*
+- [Power BI Backgrounds and Icons: Design with PowerPoint](/posts/power-bi-backgrounds-icons/)
