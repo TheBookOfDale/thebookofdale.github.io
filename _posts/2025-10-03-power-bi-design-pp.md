@@ -75,7 +75,7 @@ PowerPoint is an underrated design tool for Power BI. It offers:
 
 ---
 
-### Contoso Manufacturing Example
+### Contoso Manufacturing Example (Background)
 
 For this example, we’ll design a sidebar to hold navigation buttons. Since each button is **48 px** tall, we’ll create a sidebar that’s **60 px wide** — large enough for usability without stealing too much canvas space. In PowerPoint:
 
@@ -96,6 +96,18 @@ Icons are powerful for navigation and storytelling. In PowerPoint:
 
 ---
 
+### Contoso Manufacturing Example (Icons)
+
+For this example, we’ll design navigation icons that fit neatly into the **60 px sidebar**. Since our target size in Power BI is **48×48 px**, we’ll design larger in PowerPoint for crisp scaling:
+
+- **Set up a square canvas** about **1.5 in × 1.5 in** (≈144×144 px) to design each icon.  
+- **Draw simple shapes** (arrows, circles, or status symbols) and combine them into meaningful icons.  
+- **Apply brand colors**: use light gray `#E0E0E0` or white for default icons, and accent colors like orange `#E87722` or green `#4CAF50` for active or status states.  
+- **Export each icon** as a **PNG with transparent background**.  
+- In Power BI, **insert the PNG** and resize it to **48×48 px** so it aligns perfectly within the sidebar.  
+
+---
+
 ## ⚡ Step 3 — Apply Backgrounds and Icons in Power BI
 
 - Import your background into the **Page Background** property.  
@@ -106,9 +118,25 @@ Pairing icons with [Power BI Bookmarks](/posts/power-bi-bookmarks/) allows you t
 
 ---
 
+### Contoso Manufacturing Example (Applying Sidebar + Icons)
+
+Now that we have both the **sidebar background** and **navigation icons**, we can bring them together in Power BI:
+
+- **Set the background:** In the **Format pane → Canvas background**, upload the sidebar PNG and set transparency to **0**.  
+- **Insert icons:** Add your exported PNG icons and resize them to **48×48 px** so they align neatly within the 60 px sidebar.  
+- **Position consistently:** Place icons in a vertical column, leaving equal spacing between each for a clean, balanced look.  
+- **Assign actions:** Turn each icon into a **button** and link it to a **bookmark** or **page navigation** action.  
+- **Test interactivity:** Switch between bookmarks to confirm the sidebar feels like an app‑style navigation menu.  
+
+This combination of a branded sidebar and consistent icons creates a polished, professional navigation system that feels intuitive and reinforces Contoso Manufacturing’s identity.
+
+---
+
 ## ✅ Final Thoughts on Power BI Backgrounds and Icons
 
-By creating branded backgrounds and icons in PowerPoint, you extend your **visual identity** into every corner of Power BI. Combined with templates and themes, these assets transform your reports from functional dashboards into **professional, branded communication tools**.  
+By designing branded backgrounds and icons in PowerPoint, you extend your **visual identity** into every corner of Power BI. When combined with templates and themes, these assets elevate dashboards from functional tools into **professional, branded experiences** that communicate with clarity and consistency.  
+
+The result isn’t just a polished report — it’s a **repeatable design system** your team can rely on, ensuring every new dashboard feels cohesive, intentional, and unmistakably yours.
 
 ---
 
