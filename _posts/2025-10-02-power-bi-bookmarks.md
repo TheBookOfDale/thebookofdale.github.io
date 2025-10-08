@@ -68,6 +68,7 @@ Yes. Paired with buttons, bookmarks can simulate tabs, guided walkthroughs, or r
 ### What’s the difference between bookmarks and drill-through?
 Bookmarks save a specific view of a page, while drill-through navigates to a different page filtered by a selected data point.
 
+<!-- Structured Data: FAQ schema for SEO -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

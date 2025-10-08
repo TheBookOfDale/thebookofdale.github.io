@@ -87,6 +87,7 @@ Yes. Templates can embed logos, color palettes, and typography so every report r
 ### What’s the difference between a template and a theme?
 A **theme** controls colors and fonts, while a **template** includes layout, visuals, and design elements. Together, they create a complete branded experience.
 
+<!-- Structured Data: FAQ schema for SEO -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

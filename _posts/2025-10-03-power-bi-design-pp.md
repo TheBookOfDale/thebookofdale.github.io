@@ -14,6 +14,43 @@ pin: false
 comments: true
 ---
 
+<!--
+Structured Data: BlogPosting schema for SEO
+This JSON-LD block tells Google that this page is a blog article,
+with metadata like title, description, author, publish date, and image.
+It helps enable rich results in search.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Power BI Backgrounds and Icons: Design with PowerPoint",
+  "description": "Learn how to design Power BI report backgrounds and custom icons in PowerPoint to create polished, branded dashboards that align with your theme.",
+  "image": "https://thebookofdale.github.io/assets/images/powerbi-backgrounds-thumb.png",
+  "author": {
+    "@type": "Person",
+    "name": "Christopher Dale"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The Book of Dale",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://thebookofdale.github.io/assets/images/logo.png"
+    }
+  },
+  "url": "https://thebookofdale.github.io/posts/power-bi-backgrounds-icons/",
+  "datePublished": "2025-10-03T09:00:00-04:00",
+  "dateModified": "2025-10-07T15:47:10-04:00",
+  "articleSection": ["Analytics", "Power BI", "Branding"],
+  "keywords": ["Power BI", "Report Backgrounds", "Custom Icons", "PowerPoint", "Branding", "Templates"],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://thebookofdale.github.io/posts/power-bi-backgrounds-icons/"
+  }
+}
+</script>
+
 Once you’ve established a **report template** and a **custom theme**, the next step in building a professional reporting ecosystem is to create **template objects** — reusable backgrounds and icons. These elements give your reports polish, consistency, and a sense of identity that aligns with your organization’s brand and builds on your [report templates](/posts/power-bi-report-templates/) and [custom theme](/posts/power-bi-custom-theme/) to complete a cohesive design system.
 
 ---
@@ -35,6 +72,17 @@ PowerPoint is an underrated design tool for Power BI. It offers:
 3. Use **brand colors** (from your theme JSON) for accents and section dividers.  
 4. Keep it **minimal** — backgrounds should guide, not distract.  
 5. Export the slide as a **PNG** and set it as the page background in Power BI.  
+
+---
+
+### Contoso Manufacturing Example
+
+For this example, we’ll design a sidebar to hold navigation buttons. Since each button is **48 px** tall, we’ll create a sidebar that’s **60 px wide** — large enough for usability without stealing too much canvas space. In PowerPoint:
+
+- **Draw a rectangle** 0.55 inches wide.  
+- **Add a second rectangle** 0.13 inches wide alongside it.  
+- **Fill each shape** with contrasting colors from your theme to create a two‑tone sidebar.  
+- **Export the slide** as a PNG. In Power BI, open the **Format pane → Canvas background**, upload your PNG, and set **transparency = 0**.
 
 ---
 
@@ -78,6 +126,7 @@ Yes. You can import PNG or SVG icons into Power BI and use them as buttons for b
 ### How do backgrounds and icons improve reports?
 They provide visual structure, reinforce branding, and make dashboards feel polished and professional.
 
+<!-- Structured Data: FAQ schema for SEO -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

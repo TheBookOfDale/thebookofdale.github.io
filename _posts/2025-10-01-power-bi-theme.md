@@ -260,6 +260,7 @@ Yes. Once exported, a theme JSON can be imported into any report to maintain a u
 ### How do I style the filter pane in Power BI?
 In the **Customize Theme → Filter Pane** section, you can set background, text, and card styles for available and applied filters.
 
+<!-- Structured Data: FAQ schema for SEO -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
