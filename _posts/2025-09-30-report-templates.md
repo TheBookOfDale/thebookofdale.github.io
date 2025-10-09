@@ -133,6 +133,7 @@ A **theme** controls colors and fonts, while a **template** includes layout, vis
 
 ## 🔗 Series: Team Enablement & Branding
 
+- [You’re Leading an Analytics Team—Now What?](/posts/analytics-team-lead-foundation/)
 - [Power BI Report Templates: Why Standardization Matters for Teams](/posts/power-bi-report-templates/) ← *You are here*
 - [Creating a Custom Power BI Theme: Aligning Reports with Your Brand](/posts/power-bi-custom-theme/)
 - [Power BI Backgrounds and Icons: Design with PowerPoint](/posts/power-bi-backgrounds-icons/)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Power BI Bookmarks: Interactive Storytelling and Navigation"
-date: 2025-10-02 12:30:00 -0400
+date: 2025-10-03 12:30:00 -0400
 categories: [Analytics, Power BI, UX]
 tags: [Power BI, Bookmarks, Interactive Dashboards, Storytelling, User Experience]
 description: "Learn how to use Power BI Bookmarks to create interactive storytelling, guided navigation, and app-like dashboards that engage users."

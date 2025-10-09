@@ -313,6 +313,7 @@ In the **Customize Theme → Filter Pane** section, you can set background, text
 ---
 ## 🔗 Series: Team Enablement & Branding
 
+- [You’re Leading an Analytics Team—Now What?](/posts/analytics-team-lead-foundation/)
 - [Power BI Report Templates: Why Standardization Matters for Teams](/posts/power-bi-report-templates/)
 - [Creating a Custom Power BI Theme: Aligning Reports with Your Brand](/posts/power-bi-custom-theme/) ← *You are here*
 - [Power BI Backgrounds and Icons: Design with PowerPoint](/posts/power-bi-backgrounds-icons/)

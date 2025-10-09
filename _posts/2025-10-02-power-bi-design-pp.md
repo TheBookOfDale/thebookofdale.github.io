@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Power BI Backgrounds and Icons: Design with PowerPoint"
-date: 2025-10-03 09:00:00 -0400
+date: 2025-10-02 09:00:00 -0400
 categories: [Analytics, Power BI, Branding]
 tags: [Power BI, Report Backgrounds, Custom Icons, PowerPoint, Branding, Templates]
 description: "Learn how to design Power BI report backgrounds and custom icons in PowerPoint to create polished, branded dashboards that align with your theme."
@@ -77,6 +77,15 @@ PowerPoint is an underrated design tool for Power BI. It offers:
 
 ### Contoso Manufacturing Example (Background)
 
+<figure class="float-end ms-3 mb-3" style="max-width:300px;">
+  <img src="/assets/images/contoso-mfg-background.png"
+       alt="Screenshot of Contoso background applied in Power BI Desktop"
+       class="img-fluid">
+  <figcaption class="text-center small text-muted">
+    Figure 1 — Contoso background applied in Power BI Desktop
+  </figcaption>
+</figure>
+
 For this example, we’ll design a sidebar to hold navigation buttons. Since each button is **48 px** tall, we’ll create a sidebar that’s **60 px wide** — large enough for usability without stealing too much canvas space. In PowerPoint:
 
 - **Draw a rectangle** 0.55 inches wide.  
@@ -97,6 +106,15 @@ Icons are powerful for navigation and storytelling. In PowerPoint:
 ---
 
 ### Contoso Manufacturing Example (Icons)
+
+<figure class="float-end ms-3 mb-3" style="max-width:300px;">
+  <img src="/assets/images/custom-pages-icon.png"
+       alt="Screenshot of custom icon for page navigation in Power BI"
+       class="img-fluid">
+  <figcaption class="text-center small text-muted">
+    Figure 2 — Custom icon for page navigation in Power BI
+  </figcaption>
+</figure>
 
 For this example, we’ll design navigation icons that fit neatly into the **60 px sidebar**. Since our target size in Power BI is **48×48 px**, we’ll design larger in PowerPoint for crisp scaling:
 
@@ -119,6 +137,15 @@ Pairing icons with [Power BI Bookmarks](/posts/power-bi-bookmarks/) allows you t
 ---
 
 ### Contoso Manufacturing Example (Applying Sidebar + Icons)
+
+<figure class="float-end ms-3 mb-3" style="max-width:200px;">
+  <img src="/assets/images/contoso-sidebar.png"
+       alt="Screenshot of custom sidebar for standard template in Power BI"
+       class="img-fluid">
+  <figcaption class="text-center small text-muted">
+    Figure 3 — Custom sidebar for standard template in Power BI
+  </figcaption>
+</figure>
 
 Now that we have both the **sidebar background** and **navigation icons**, we can bring them together in Power BI:
 
@@ -200,6 +227,7 @@ They provide visual structure, reinforce branding, and make dashboards feel poli
 
 ## 🔗 Series: Team Enablement & Branding
 
+- [You’re Leading an Analytics Team—Now What?](/posts/analytics-team-lead-foundation/)
 - [Power BI Report Templates: Why Standardization Matters for Teams](/posts/power-bi-report-templates/)
 - [Creating a Custom Power BI Theme: Aligning Reports with Your Brand](/posts/power-bi-custom-theme/)
 - [Power BI Backgrounds and Icons: Design with PowerPoint](/posts/power-bi-backgrounds-icons/) ← *You are here*
