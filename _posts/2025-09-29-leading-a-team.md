@@ -2,6 +2,7 @@
 layout: post
 title: "You’re Leading an Analytics Team—Now What?"
 date: 2025-09-29 13:30:00 -0400
+published: true
 categories: [Analytics, Leadership, Enablement]
 tags: [Analytics Team Lead, Microsoft Stack, SharePoint, Power BI, Governance, Automation, Team Enablement]
 description: "A strategic guide for new analytics team leads on building a scalable foundation using the Microsoft ecosystem."

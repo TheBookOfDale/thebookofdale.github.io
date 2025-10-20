@@ -2,6 +2,7 @@
 layout: post
 title: "Building a Robust Date Table for Analytics in SQL"
 date: 2025-10-04 13:15:00 -0400
+published: true
 categories: [Analytics, Power BI, SQL]
 tags: [Power BI, SQL Server, Date Table, Data Modeling]
 description: "Learn how to create and populate a reusable SQL date table that powers consistent time intelligence in analytics and Power BI."

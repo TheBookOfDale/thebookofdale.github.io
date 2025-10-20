@@ -2,6 +2,7 @@
 layout: post
 title: "Power BI Backgrounds and Icons: Design with PowerPoint"
 date: 2025-10-02 09:00:00 -0400
+published: true
 categories: [Analytics, Power BI, Branding]
 tags: [Power BI, Report Backgrounds, Custom Icons, PowerPoint, Branding, Templates]
 description: "Learn how to design Power BI report backgrounds and custom icons in PowerPoint to create polished, branded dashboards that align with your theme."

@@ -2,6 +2,7 @@
 layout: post
 title: "Creating a Custom Power BI Theme: Aligning Reports with Your Brand"
 date: 2025-10-01 09:00:00 -0400
+published: true
 categories: [Analytics, Power BI, Branding]
 tags: [Power BI, Themes, Branding, Templates, UX]
 description: "Learn how to create a custom Power BI theme with JSON, colors, fonts, and filter pane settings to align reports with your brand."
