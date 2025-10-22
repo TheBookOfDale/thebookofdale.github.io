@@ -6,9 +6,9 @@ published: true
 categories: [Analytics, Power BI, DAX]
 tags: [Power BI, DAX, Metadata, Data Modeling, Governance]
 description: "Use INFO.TABLES, INFO.COLUMNS, INFO.RELATIONSHIPS, and INFO.MEASURES to expose model metadata directly in Power BI for documentation, QA, and governance."
-image:
-  path: /assets/images/posts/info-functions/info-functions-overview.png
-  alt: "Power BI INFO functions metadata table example"
+# image:
+#   path: /assets/images/posts/info-functions/info-functions-overview.png
+#   alt: "Power BI INFO functions metadata table example"
 permalink: /posts/info-functions-metadata/
 series: Manufacturing Analytics Foundations
 pin: false
