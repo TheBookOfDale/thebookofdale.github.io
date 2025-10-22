@@ -170,9 +170,13 @@ kramdown:
       start_line: 1
 
 collections:
+  pages:
+    output: true
+    permalink: /:path/
   tabs:
     output: true
     sort_by: order
+
 
 defaults:
   - scope:
