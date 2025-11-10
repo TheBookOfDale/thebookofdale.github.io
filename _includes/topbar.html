@@ -8,7 +8,12 @@
 
             {% if paths.size == 0 or page.layout == 'home' %}
             <!-- index page -->
-            <span>{{ site.data.locales[include.lang].tabs.home | capitalize }}</span>
+            <span>
+                <a href="{{ site.baseurl }}/">
+                    {{ site.data.locales[include.lang].tabs.home | capitalize }}
+                </a>
+            </span>
+
             {% else %}
             {% assign path = '' %}
 
@@ -17,7 +22,7 @@
 
             {% if forloop.first %}
             <span>
-                <a href="{{ site.baseurl | append: path | remove_first: '/' }}">
+                <a href="{{ site.baseurl }}/">
                     {{ site.data.locales[include.lang].tabs.home | capitalize }}
                 </a>
             </span>
