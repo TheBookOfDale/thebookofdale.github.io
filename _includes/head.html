@@ -122,7 +122,9 @@
     {% include metadata-hook.html %}
 
     {% assign path = '' %}
-    {% assign paths = page.url | split: '/' | reject: '' %}
+    {% assign clean_url = page.url | remove_first: '/' | replace: '//','/' | strip %}
+    {% assign clean_url = clean_url | replace: '/$', '' %}
+    {% assign paths = clean_url | split: '/' | compact %}
 
     <script type="application/ld+json">
     {
@@ -132,21 +134,19 @@
         {
         "@type": "ListItem",
         "position": 1,
-        "name": "{{ site.data.locales[include.lang].tabs.home | capitalize }}",
+        "name": "{{ site.data.locales[include.lang].tabs.home | default: 'Home' | capitalize }}",
         "item": "{{ site.url }}{{ site.baseurl }}/"
         }
-        {% if paths.size > 0 %}
         {% for item in paths %}
-            {% assign path = path | append: '/' | append: item %}
-            ,
-            {
+        {% assign path = path | append: '/' | append: item %}
+        ,
+        {
             "@type": "ListItem",
             "position": {{ forloop.index | plus: 1 }},
             "name": "{% if forloop.last %}{{ page.title }}{% else %}{{ site.data.locales[include.lang].tabs[item] | default: item | replace: '-', ' ' | capitalize }}{% endif %}",
             "item": "{{ site.url }}{{ site.baseurl }}{{ path }}/"
-            }
+        }
         {% endfor %}
-        {% endif %}
     ]
     }
     </script>
