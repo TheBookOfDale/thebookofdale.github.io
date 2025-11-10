@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Transformer UI
-permalink: /transformer-ui/
+title: XSLT Transformer
+permalink: /tools/xslt-transformer/
 ---
 
 <h1>XML Transformer</h1>
@@ -13,44 +13,80 @@ permalink: /transformer-ui/
   <label for="xsltInput"><strong>XSLT Stylesheet</strong></label>
   <textarea id="xsltInput" rows="10" placeholder="Paste your XSLT here..."></textarea>
 
-  <button onclick="transformXML()">Transform</button>
+  <div class="button-row">
+    <button class="button" onclick="transformXML()">Transform</button>
+    <!-- <div class="output-toggle"> -->
+      <button class="toggle-button" id="toggleXML" onclick="showXML()">XML</button>
+      <button class="toggle-button" id="toggleRendered" onclick="showRendered()">Rendered</button>
+      <button class="toggle-button" id="toggleText" onclick="showText()">Text</button>
+    <!-- </div> -->
+  </div>
 
   <label for="output"><strong>Transformed Output</strong></label>
-  <pre id="output" class="output-block"></pre>
+  <div id="viewXML" class="output-view">
+    <pre class="output-block"><code id="outputXML" class="language-xml"></code></pre>
+  </div>
+
+  <div id="viewRendered" class="output-view" style="display: none;">
+    <iframe id="outputRendered" class="output-block"></iframe>
+  </div>
+
+  <div id="viewText" class="output-view" style="display: none;">
+    <pre class="output-block"><code id="outputText"></code></pre>
+  </div>
 </div>
 
+<link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-xml.min.js"></script>
+
+<!-- Include js file -->
+<script src="/assets/js/xslt-transformer.js"></script>
+
+<!-- Link to css -->
+<link rel="stylesheet" href="/assets/css/xslt-transformer.css">
+
 <script>
-async function transformXML() {
-  const xml = document.getElementById("xmlInput").value;
-  const xslt = document.getElementById("xsltInput").value;
+  const useSampleData = true; // ✅ Toggle this to false to start blank
+  window.addEventListener("DOMContentLoaded", () => {
+  if (useSampleData) {
+    document.getElementById("xmlInput").value = `
+<library>
+  <book>
+    <title>1984</title>
+    <author>George Orwell</author>
+  </book>
+  <book>
+    <title>Brave New World</title>
+    <author>Aldous Huxley</author>
+  </book>
+</library>
+`.trim();
 
-  const response = await fetch("http://localhost:4567/transform", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ xml, xslt })
-  });
-
-  const result = await response.text();
-  document.getElementById("output").textContent = result;
-}
+    document.getElementById("xsltInput").value = `
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output method="html" indent="yes"/>
+  <xsl:template match="/library">
+    <html>
+      <head><title>Library Catalog</title></head>
+      <body>
+        <h1>Library Catalog</h1>
+        <table border="1">
+          <tr><th>Title</th><th>Author</th></tr>
+          <xsl:for-each select="book">
+            <tr>
+              <td><xsl:value-of select="title"/></td>
+              <td><xsl:value-of select="author"/></td>
+            </tr>
+          </xsl:for-each>
+        </table>
+      </body>
+    </html>
+  </xsl:template>
+</xsl:stylesheet>
+`.trim();
+  }
+});
 </script>
-
-<style>
-.transformer-ui textarea {
-  width: 100%;
-  font-family: monospace;
-  margin-bottom: 1em;
-}
-.transformer-ui button {
-  display: block;
-  margin: 1em 0;
-}
-.output-block {
-  background: #f5f5f5;
-  padding: 1em;
-  white-space: pre-wrap;
-  border: 1px solid #ccc;
-  height: 400px;
-  overflow: auto;
-}
-</style>

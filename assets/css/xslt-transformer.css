@@ -1,0 +1,103 @@
+.transformer-ui textarea {
+  width: 100%;
+  font-family: monospace;
+  margin-bottom: 1em;
+}
+
+/* .button {
+  padding: 0.5em 1em;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #0078d4;
+  color: white;
+  transition: background 0.2s ease;
+} */
+
+.button:hover {
+  background-color: #005ea2;
+}
+
+.toggle-button {
+  padding: 0.5em 1em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: normal;
+  transition: background 0.2s ease;
+}
+
+.toggle-button:hover {
+  background-color: #e0e0e0;
+}
+
+.toggle-button.selected {
+  background-color: #0078d4;
+  color: white;
+  border-color: #0078d4;
+  font-weight: bold;
+}
+
+.output-block {
+  padding: 1em;
+  white-space: pre-wrap;
+  border: 1px solid #ccc;
+  min-height: 400px;
+  overflow: auto;
+  /* Optional: uncomment for dark theme */
+  background: #333; color: #fff;
+  line-height: 1.5;
+  font-size: 0.95em;
+}
+
+.button-row {
+  display: flex;
+  gap: 0.5rem; /* spacing between buttons */
+  margin-top: 1rem;
+}
+
+.copy-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  margin: 1em 0;
+}
+
+#copyStatus {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  color: green;
+}
+
+#copyStatus.visible {
+  opacity: 1;
+}
+
+/* Prism Overrides */
+/* Flatten Prism token styling */
+.token {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: inline !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  line-height: inherit !important;
+}
+
+/* Optional: soften colors for XML tags */
+/* .token.tag,
+.token.punctuation,
+.token.attr-name,
+.token.attr-value {
+  color: inherit !important;
+  font-weight: normal !important;
+} */
