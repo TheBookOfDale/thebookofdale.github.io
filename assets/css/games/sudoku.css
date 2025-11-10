@@ -1,0 +1,18 @@
+.sudoku-grid {
+  display: grid;
+  grid-template-columns: repeat(9, 40px);
+  grid-template-rows: repeat(9, 40px);
+  gap: 1px;
+}
+.cell {
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+.cell[data-row="2"], .cell[data-row="5"] {
+  border-bottom: 2px solid #000;
+}
+.cell[data-col="2"], .cell[data-col="5"] {
+  border-right: 2px solid #000;
+}
