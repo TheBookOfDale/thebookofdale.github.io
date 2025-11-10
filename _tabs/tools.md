@@ -10,7 +10,7 @@ permalink: /tools/
 <p>Select a tool below:</p>
 
 <ul class="tool-list">
-  <li><a href="/tools/xml-xslt-transformer/">XML/XSLT Transformer</a></li>
-  <li><a href="/json-validator/">JSON Validator</a></li>
-  <li><a href="/markdown-preview/">Markdown Preview</a></li>
+  <li><a href="/tools/xslt-transformer/">XSLT Transformer</a></li>
+  <!-- <li><a href="/tools/json-validator/">JSON Validator</a></li>
+  <li><a href="/tools/markdown-preview/">Markdown Preview</a></li> -->
 </ul>
