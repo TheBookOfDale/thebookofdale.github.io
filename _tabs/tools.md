@@ -1,7 +1,7 @@
 ---
 title: Tools
 icon: fas fa-code
-order: 99
+order: 6
 layout: page
 permalink: /tools/
 ---

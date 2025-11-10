@@ -1,7 +1,7 @@
 ---
 title: Games
 icon: fas fa-chess
-order: 99
+order: 5
 layout: page
 permalink: /games/
 ---
