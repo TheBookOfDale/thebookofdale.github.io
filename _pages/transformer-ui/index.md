@@ -4,7 +4,7 @@ title: XSLT Transformer
 permalink: /tools/xslt-transformer/
 ---
 
-<h1>XML Transformer</h1>
+<h1>XSLT Transformer</h1>
 
 <div class="transformer-ui">
   <label for="xmlInput"><strong>XML Input</strong></label>
@@ -41,10 +41,10 @@ permalink: /tools/xslt-transformer/
 <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-xml.min.js"></script>
 
 <!-- Include js file -->
-<script src="/assets/js/xslt-transformer.js"></script>
+<script src="/assets/js/tools/xslt-transformer.js"></script>
 
 <!-- Link to css -->
-<link rel="stylesheet" href="/assets/css/xslt-transformer.css">
+<link rel="stylesheet" href="/assets/css/tools/xslt-transformer.css">
 
 <script>
   const useSampleData = true; // ✅ Toggle this to false to start blank
