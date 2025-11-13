@@ -4,7 +4,7 @@ title: XSLT Transformer
 permalink: /tools/xslt-transformer/
 ---
 
-<h1>XSLT Transformer</h1>
+<h2>Transform your XML</h2>
 
 <div class="transformer-ui">
   <label for="xmlInput"><strong>XML Input</strong></label>
