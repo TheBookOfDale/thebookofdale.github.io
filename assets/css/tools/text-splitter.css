@@ -1,0 +1,25 @@
+.text-splitter-tool textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  font-family: monospace;
+}
+
+.text-splitter-tool .chunk {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+}
+
+.text-splitter-tool .copy-btn {
+  background: #0078d4;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.text-splitter-tool .copy-btn:hover {
+  background: #005a9e;
+}
