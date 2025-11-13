@@ -15,3 +15,15 @@ layout: default
         {{ content }}
     </section>
 </article>
+
+{% if page.scripts %}
+{% for js in page.scripts %}
+<script src="{{ js | relative_url }}"></script>
+{% endfor %}
+{% endif %}
+
+{% if page.stylesheets %}
+{% for css in page.stylesheets %}
+<link rel="stylesheet" href="{{ css | relative_url }}">
+{% endfor %}
+{% endif %}
