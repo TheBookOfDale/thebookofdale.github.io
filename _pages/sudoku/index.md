@@ -3,8 +3,12 @@ layout: game
 title: "Sudoku"
 permalink: /games/sudoku/
 icon: fas fa-puzzle-piece
+scripts:
+  - /assets/js/games/sudoku.js
+stylesheets:
+  - /assets/css/games/sudoku.css
 ---
 
 <div id="sudoku"></div>
-<script src="/assets/js/games/sudoku.js"></script>
-<link rel="stylesheet" href="/assets/css/games/sudoku.css">
+
+<button onclick="checkSudoku()">Check Puzzle</button>
