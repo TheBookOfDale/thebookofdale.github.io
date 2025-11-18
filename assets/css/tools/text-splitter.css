@@ -7,8 +7,9 @@
 .text-splitter-tool .chunk {
   margin-top: 20px;
   padding: 10px;
-  border: 1px solid #ccc;
-  background: #fafafa;
+  border: 1px solid #444;
+  background: transparent;
+  border-radius: 6px;
 }
 
 .text-splitter-tool .copy-btn {
