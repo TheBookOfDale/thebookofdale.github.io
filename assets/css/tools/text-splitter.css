@@ -4,12 +4,19 @@
   font-family: monospace;
 }
 
+.text-splitter-tool .chunk h2,
+.text-splitter-tool .chunk h3,
+.text-splitter-tool .chunk p {
+  margin-top: 0;   /* remove default top margin */
+}
+
 .text-splitter-tool .chunk {
   margin-top: 20px;
   padding: 10px;
   border: 1px solid #444;
   background: transparent;
   border-radius: 6px;
+  padding: 4px 4px;
 }
 
 .text-splitter-tool .copy-btn {
