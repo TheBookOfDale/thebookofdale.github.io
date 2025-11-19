@@ -5,35 +5,35 @@ permalink: /tools/xslt-transformer/
 ---
 
 <div class="transformer-ui">
-  <h2>Transform your XML</h2>
+    <h2>Transform your XML</h2>
 
-  <label for="xmlInput"><strong>XML Input</strong></label>
-  <textarea id="xmlInput" rows="8" placeholder="Paste your XML here..."></textarea>
+    <label for="xmlInput"><strong>XML Input</strong></label>
+    <textarea id="xmlInput" rows="8" placeholder="Paste your XML here..."></textarea>
 
-  <label for="xsltInput"><strong>XSLT Stylesheet</strong></label>
-  <textarea id="xsltInput" rows="10" placeholder="Paste your XSLT here..."></textarea>
+    <label for="xsltInput"><strong>XSLT Stylesheet</strong></label>
+    <textarea id="xsltInput" rows="10" placeholder="Paste your XSLT here..."></textarea>
 
-  <div class="button-row">
-    <button class="button" onclick="transformXML()">Transform</button>
-    <!-- <div class="output-toggle"> -->
-    <button class="toggle-button" id="toggleXML" onclick="showXML()">XML</button>
-    <button class="toggle-button" id="toggleRendered" onclick="showRendered()">Rendered</button>
-    <button class="toggle-button" id="toggleText" onclick="showText()">Text</button>
-    <!-- </div> -->
-  </div>
+    <div class="button-row">
+        <button class="button" onclick="transformXML()">Transform</button>
+        <!-- <div class="output-toggle"> -->
+        <button class="toggle-button" id="toggleXML" onclick="showXML()">XML</button>
+        <button class="toggle-button" id="toggleRendered" onclick="showRendered()">Rendered</button>
+        <button class="toggle-button" id="toggleText" onclick="showText()">Text</button>
+        <!-- </div> -->
+    </div>
 
-  <label for="output"><strong>Transformed Output</strong></label>
-  <div id="viewXML" class="output-view">
-    <pre class="output-block"><code id="outputXML" class="language-xml"></code></pre>
-  </div>
+    <label for="output"><strong>Transformed Output</strong></label>
+    <div id="viewXML" class="output-view">
+        <pre class="output-block"><code id="outputXML" class="language-xml"></code></pre>
+    </div>
 
-  <div id="viewRendered" class="output-view">
-    <iframe id="outputRendered" class="output-block" title="Transformed output preview"></iframe>
-  </div>
+    <div id="viewRendered" class="output-view">
+        <iframe id="outputRendered" class="output-block" title="Transformed output preview"></iframe>
+    </div>
 
-  <div id="viewText" class="output-view">
-    <pre class="output-block"><code id="outputText"></code></pre>
-  </div>
+    <div id="viewText" class="output-view">
+        <pre class="output-block"><code id="outputText"></code></pre>
+    </div>
 </div>
 
 <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
@@ -47,10 +47,10 @@ permalink: /tools/xslt-transformer/
 <link rel="stylesheet" href="/assets/css/tools/xslt-transformer.css">
 
 <script>
-  const useSampleData = true; // ✅ Toggle this to false to start blank
-  window.addEventListener("DOMContentLoaded", () => {
-    if (useSampleData) {
-      document.getElementById("xmlInput").value = `
+    const useSampleData = true; // ✅ Toggle this to false to start blank
+    window.addEventListener("DOMContentLoaded", () => {
+        if (useSampleData) {
+            document.getElementById("xmlInput").value = `
 <library>
   <book>
     <title>1984</title>
@@ -63,7 +63,7 @@ permalink: /tools/xslt-transformer/
 </library>
 `.trim();
 
-      document.getElementById("xsltInput").value = `
+            document.getElementById("xsltInput").value = `
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
@@ -87,6 +87,6 @@ permalink: /tools/xslt-transformer/
   </xsl:template>
 </xsl:stylesheet>
 `.trim();
-    }
-  });
+        }
+    });
 </script>
