@@ -4,9 +4,9 @@ title: XSLT Transformer
 permalink: /tools/xslt-transformer/
 ---
 
-<h2>Transform your XML</h2>
-
 <div class="transformer-ui">
+  <h2>Transform your XML</h2>
+
   <label for="xmlInput"><strong>XML Input</strong></label>
   <textarea id="xmlInput" rows="8" placeholder="Paste your XML here..."></textarea>
 
@@ -16,9 +16,9 @@ permalink: /tools/xslt-transformer/
   <div class="button-row">
     <button class="button" onclick="transformXML()">Transform</button>
     <!-- <div class="output-toggle"> -->
-      <button class="toggle-button" id="toggleXML" onclick="showXML()">XML</button>
-      <button class="toggle-button" id="toggleRendered" onclick="showRendered()">Rendered</button>
-      <button class="toggle-button" id="toggleText" onclick="showText()">Text</button>
+    <button class="toggle-button" id="toggleXML" onclick="showXML()">XML</button>
+    <button class="toggle-button" id="toggleRendered" onclick="showRendered()">Rendered</button>
+    <button class="toggle-button" id="toggleText" onclick="showText()">Text</button>
     <!-- </div> -->
   </div>
 
@@ -27,11 +27,11 @@ permalink: /tools/xslt-transformer/
     <pre class="output-block"><code id="outputXML" class="language-xml"></code></pre>
   </div>
 
-  <div id="viewRendered" class="output-view" style="display: none;">
-    <iframe id="outputRendered" class="output-block"></iframe>
+  <div id="viewRendered" class="output-view">
+    <iframe id="outputRendered" class="output-block" title="Transformed output preview"></iframe>
   </div>
 
-  <div id="viewText" class="output-view" style="display: none;">
+  <div id="viewText" class="output-view">
     <pre class="output-block"><code id="outputText"></code></pre>
   </div>
 </div>
@@ -49,8 +49,8 @@ permalink: /tools/xslt-transformer/
 <script>
   const useSampleData = true; // ✅ Toggle this to false to start blank
   window.addEventListener("DOMContentLoaded", () => {
-  if (useSampleData) {
-    document.getElementById("xmlInput").value = `
+    if (useSampleData) {
+      document.getElementById("xmlInput").value = `
 <library>
   <book>
     <title>1984</title>
@@ -63,7 +63,7 @@ permalink: /tools/xslt-transformer/
 </library>
 `.trim();
 
-    document.getElementById("xsltInput").value = `
+      document.getElementById("xsltInput").value = `
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
@@ -87,6 +87,6 @@ permalink: /tools/xslt-transformer/
   </xsl:template>
 </xsl:stylesheet>
 `.trim();
-  }
-});
+    }
+  });
 </script>

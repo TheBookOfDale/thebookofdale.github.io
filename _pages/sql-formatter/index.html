@@ -1,0 +1,78 @@
+---
+layout: page
+title: SQL Formatter
+permalink: /tools/sql-formatter/
+---
+
+<div class="sql-formatter-tool">
+  <h2>Format your SQL</h2>
+
+  <label for="sql-input">Paste your SQL:</label>
+  <textarea id="sql-input" placeholder="SELECT * FROM users WHERE id = 1;">
+SELECT u.id, u.name,
+  CASE
+    WHEN EXISTS (
+      SELECT 1
+      FROM orders o
+      WHERE o.user_id = u.id
+        AND o.status = 'open'
+    )
+    THEN 'Has Open Orders'
+    ELSE 'No Open Orders'
+  END AS order_status,
+  (
+    SELECT COUNT(*)
+    FROM sessions s
+    WHERE s.user_id = u.id
+      AND s.active = true
+  ) AS active_sessions
+FROM users u
+WHERE u.created_at > '2025-01-01'
+ORDER BY u.name;</textarea>
+
+  <div class="controls">
+    <label for="dialect">SQL Dialect:</label>
+    <select id="dialect">
+      <option value="sql">Standard SQL</option>
+      <option value="postgresql">PostgreSQL</option>
+      <option value="mysql">MySQL</option>
+      <option value="sqlite">SQLite</option>
+    </select>
+    <button onclick="updatePreview()">Format</button>
+    <button onclick="copySQL()">Copy</button>
+  </div>
+
+  <label>
+    <input type="checkbox" id="livePreview" checked>
+    Enable Live Preview
+  </label>
+
+  <label for="uppercase">Keyword Case:</label>
+  <select id="uppercase">
+    <option value="true">Uppercase</option>
+    <option value="false">Lowercase</option>
+  </select>
+
+  <label for="indent">Indentation:</label>
+  <select id="indent">
+    <option value="2">2 spaces</option>
+    <option value="4">4 spaces</option>
+    <option value="tab">Tab</option>
+  </select>
+
+  <label for="linesBetweenQueries">Lines Between Queries:</label>
+  <select id="linesBetweenQueries">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+  </select>
+</div>
+<div>
+  <pre id="sql-output" class="language-sql"></pre>
+</div>
+
+<link rel="stylesheet" href="/assets/css/tools/sql-formatter.css">
+<script src="https://cdn.jsdelivr.net/npm/sql-formatter/dist/sql-formatter.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-sql.min.js"></script>
+<script src="/assets/js/tools/sql-formatter.js"></script>
