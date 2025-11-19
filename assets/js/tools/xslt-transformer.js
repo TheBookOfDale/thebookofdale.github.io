@@ -7,11 +7,13 @@ async function transformXML() {
   const renderedBtn = document.getElementById("toggleRendered");
 
   if (method === "html") {
-    renderedBtn.style.display = "inline-block";
+    renderedBtn.classList.remove("hidden");
+    renderedBtn.classList.add("inline-block");
     renderedBtn.disabled = false;
     renderedBtn.title = "";
   } else {
-    renderedBtn.style.display = "none";
+    renderedBtn.classList.add("hidden");
+    renderedBtn.classList.remove("inline-block");
     renderedBtn.disabled = true;
     renderedBtn.title = "Rendered view only available for HTML output";
   }
@@ -84,7 +86,12 @@ function showView(viewId, toggleId) {
   const toggles = ["toggleXML", "toggleRendered", "toggleText"];
 
   views.forEach(id => {
-    document.getElementById(id).style.display = id === viewId ? "block" : "none";
+    const el = document.getElementById(id);
+    if (id === viewId) {
+      el.classList.remove("hidden");
+    } else {
+      el.classList.add("hidden");
+    }
   });
 
   toggles.forEach(id => {
@@ -93,17 +100,9 @@ function showView(viewId, toggleId) {
   });
 }
 
-function showXML() {
-  showView("viewXML", "toggleXML");
-}
-
-function showRendered() {
-  showView("viewRendered", "toggleRendered");
-}
-
-function showText() {
-  showView("viewText", "toggleText");
-}
+function showXML() { showView("viewXML", "toggleXML"); }
+function showRendered() { showView("viewRendered", "toggleRendered"); }
+function showText() { showView("viewText", "toggleText"); }
 
 function ensureWhiteBackground(html) {
   const hasBody = html.includes("<body");
@@ -127,7 +126,7 @@ function updateOutput(result) {
   const isHtml = result.trim().startsWith("<html") || result.includes("<body>");
   const codeBlock = document.getElementById("outputXML").querySelector("code");
   const rendered = document.getElementById("outputRendered");
-  
+
   if (isHtml) {
     codeBlock.textContent = result;             // ✅ Show raw HTML in code block
     Prism.highlightElement(codeBlock);          // ✅ Highlight it
