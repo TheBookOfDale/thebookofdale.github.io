@@ -6,11 +6,11 @@ layout: page
 permalink: /tools/
 ---
 
-<h1>Developer Tools</h1>
-<p>Select a tool below:</p>
+## Developer Tools
 
-<ul class="tool-list">
-  <li><a href="/tools/text-splitter/">Text Splitter</a></li>
-  <li><a href="/tools/xslt-transformer/">XSLT Transformer</a></li>
-  <!-- <li><a href="/tools/markdown-preview/">Markdown Preview</a></li> -->
-</ul>
+Select a tool below:
+
+- [Text Splitter](/tools/text-splitter/)
+- [SQL Formatter](/tools/sql-formatter/)
+- [XSLT Transformer](/tools/xslt-transformer/)
+<!-- - [Markdown Preview](/tools/markdown-preview/) -->
