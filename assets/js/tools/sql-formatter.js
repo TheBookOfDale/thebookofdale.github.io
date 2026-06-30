@@ -12,10 +12,22 @@ function debugTokens(tokens, rules) {
     let current = tokens;
 
     for (let i = 0; i < rules.length; i++) {
-        const rule = rules[i];
+        const rule = rules[i]; // ← use the provided rule
         const name = rule.name || `rule_${i + 1}`;
-        current = rule(current);
-        console.log(`After ${name}:`, JSON.stringify(current));
+
+        const output = rule(current);
+
+        // Normalize return shape
+        const outTokens = Array.isArray(output) ? output : output.tokens;
+        const outState = Array.isArray(output) ? undefined : output.state;
+
+        current = outTokens;
+
+        if (outState) {
+            console.log(`After ${name}:`, JSON.stringify(outTokens), "state:", outState);
+        } else {
+            console.log(`After ${name}:`, JSON.stringify(outTokens));
+        }
     }
 
     console.log("Final tokens before render:", JSON.stringify(current));
@@ -34,7 +46,8 @@ function formatSQL(sql, options = {}) {
         options.enableCaseLayout ? caseLayoutRule(options) : null,
         options.enableIndent ? indentRule(options) : null,
         options.enableLineBreaks ? lineBreakRule(options) : null,
-        options.enableSpacing ? spacingRule(options) : null
+        options.enableSpacing ? spacingRule(options) : null,
+        normalizeWhitespaceRule() // always last
         // add more rules here
     ].filter(Boolean); // remove nulls
 
@@ -67,87 +80,124 @@ function columnLayoutRule({
 }) {
     const indentChar = useTabs ? "\t" : " ".repeat(indentSize);
     let insideSelect = false;
-    let insideCase = false;   // NEW: track CASE
+    let insideCase = false;
     let firstColumn = true;
+    let parenDepth = 0;
 
     return tokens => {
         const result = [];
 
+        const prevNonSpaceIndex = () => {
+            let k = result.length - 1;
+            while (k >= 0 && result[k] === " ") k--;
+            return k;
+        };
+
         for (let i = 0; i < tokens.length; i++) {
             const raw = tokens[i];
-            const t = raw.toUpperCase();
+            const tt = raw.toUpperCase().trim();
 
-            // Enter SELECT list
-            if (t === "SELECT") {
+            // Enter outer SELECT list
+            if (tt === "SELECT" && !insideSelect) {
                 insideSelect = true;
                 firstColumn = true;
                 result.push(raw);
                 continue;
             }
 
-            // Exit SELECT list at FROM
-            if (insideSelect && t === "FROM") {
+            // Exit outer SELECT only at top-level FROM
+            if (insideSelect && tt === "FROM" && !insideCase && parenDepth === 0) {
                 insideSelect = false;
-                result.push("\n" + raw);
+                result.push("\n");
+                result.push(raw);
                 continue;
             }
 
-            // Track CASE/END
-            if (insideSelect && t === "CASE") {
+            // CASE tracking inside outer SELECT
+            if (insideSelect && tt === "CASE") {
                 insideCase = true;
                 result.push(raw);
                 continue;
             }
-            if (insideSelect && insideCase && t === "END") {
+            if (insideSelect && insideCase && tt === "END") {
                 insideCase = false;
                 result.push(raw);
                 continue;
             }
 
-            // Comma behavior only inside SELECT and not inside CASE
+            // Comma behavior inside outer SELECT (not in CASE)
             if (insideSelect && !insideCase && raw === ",") {
                 result.push(",");
+                const next = tokens[i + 1] ?? "";
                 if (columnsPerLine) {
-                    result.push("\n" + indentChar);
+                    result.push("\n");
+                    result.push(indentChar);
+                } else if (next.trim() === "(" || next === " ") {
+                    // Skip adding space; "(" or an explicit space will follow
                 } else {
                     result.push(" ");
                 }
                 continue;
             }
 
-            // Columns inside SELECT
+            // Columns inside outer SELECT list
             if (insideSelect) {
                 if (firstColumn) {
                     if (firstColumnOnNewLine) {
-                        result.push("\n" + indentChar + raw.trimStart());
+                        result.push("\n");
+                        result.push(indentChar);
+                        result.push(raw);
                     } else {
                         result.push(raw);
                     }
                     firstColumn = false;
                 } else {
-                    const prev = result[result.length - 1] || "";
-                    const prevToken = prev.trim().toUpperCase();
+                    // Handle opening parenthesis using current parenDepth
+                    if (raw.trim() === "(") {
+                        if (result[result.length - 1] === " ") result.pop();
 
-                    if (KEYWORDS.has(t) && KEYWORDS.has(prevToken)) {
-                        result.push(" " + raw);
-                    } else if (raw.trim() === "") {
+                        const pIdx = prevNonSpaceIndex();
+                        const prevNonSpace = pIdx >= 0 ? result[pIdx] : "";
+
+                        const isAfterComma =
+                            prevNonSpace === "," || (typeof prevNonSpace === "string" && prevNonSpace.endsWith(","));
+
+                        const isFunctionCall =
+                            typeof prevNonSpace === "string" &&
+                            /^[A-Za-z_][A-Za-z0-9_]*$/.test(prevNonSpace.trim().replace(/\n/g, ""));
+
+                        if (!insideCase && parenDepth === 0 && isAfterComma && !isFunctionCall) {
+                            result.push("\n");
+                            result.push(indentChar);
+                            result.push("(");
+                        } else {
+                            result.push("(");
+                        }
+
+                        // Update parenDepth AFTER handling "("
+                        parenDepth++;
                         continue;
-                    } else if (!insideCase && raw.trim() === "(") {
-                        if (prev === " ") result.pop();
-                        result.push("\n" + indentChar + "(");
-                        continue;
-                    } else {
-                        result.push(KEYWORDS.has(t) ? raw : raw.trimStart());
+                    }
+
+                    // Default: pass-through and manage parenDepth for ")"
+                    result.push(raw);
+                    if (raw.trim() === ")") {
+                        parenDepth = Math.max(0, parenDepth - 1);
                     }
                 }
                 continue;
             }
 
-            // Outside SELECT
+            // Outside SELECT: pass-through and manage parenDepth
             result.push(raw);
+            if (raw.trim() === "(") parenDepth++;
+            else if (raw.trim() === ")") parenDepth = Math.max(0, parenDepth - 1);
         }
 
-        return result;
+        return {
+            tokens: result,
+            state: { insideSelect, insideCase, parenDepth }
+        };
     };
 }
 
@@ -210,26 +260,57 @@ function caseLayoutRule({ indentSize = 2, useTabs = false }) {
 function indentRule({ indentSize = 2, useTabs = false }) {
     const indentChar = useTabs ? "\t" : " ".repeat(indentSize);
     let level = 0;
-    return tokens => tokens.map(t => {
-        if (t === "(") {
-            level++;
-            return "(\n" + indentChar.repeat(level);
+
+    return tokens => {
+        const out = [];
+        for (let i = 0; i < tokens.length; i++) {
+            const t = tokens[i];
+
+            // find the last non-space token we emitted
+            let j = out.length - 1;
+            while (j >= 0 && out[j].trim() === "") j--;
+            const prev = j >= 0 ? out[j] : "";
+            const prevTrim = prev.trim().toUpperCase();
+
+            const isFunctionCall = /^[A-Z_][A-Z0-9_]*$/.test(prevTrim);
+
+            if (t === "(") {
+                if (isFunctionCall) {
+                    // inline function call
+                    out.push("(");
+                } else {
+                    level++;
+                    out.push("(\n" + indentChar.repeat(level));
+                }
+                continue;
+            }
+
+            if (t === ")") {
+                if (isFunctionCall) {
+                    // inline closing parenthesis
+                    out.push(")");
+                } else {
+                    level = Math.max(0, level - 1);
+                    out.push("\n" + indentChar.repeat(level) + ")");
+                }
+                continue;
+            }
+
+            if (["SELECT", "FROM", "WHERE", "JOIN", "GROUP", "ORDER"].includes(t.toUpperCase())) {
+                out.push("\n" + indentChar.repeat(level) + t);
+                continue;
+            }
+
+            if (["CASE", "WHEN", "THEN", "ELSE", "END"].includes(t.toUpperCase())) {
+                const caseIndent = level > 0 ? level + 1 : 1;
+                out.push("\n" + indentChar.repeat(caseIndent) + t);
+                continue;
+            }
+
+            out.push(t);
         }
-        if (t === ")") {
-            level = Math.max(0, level - 1);
-            return "\n" + indentChar.repeat(level) + ")";
-        }
-        if (["SELECT", "FROM", "WHERE", "JOIN", "GROUP", "ORDER"].includes(t.toUpperCase())) {
-            // indent keywords relative to nesting level
-            return "\n" + indentChar.repeat(level) + t;
-        }
-        if (["CASE", "WHEN", "THEN", "ELSE", "END"].includes(t.toUpperCase())) {
-            // indent CASE expressions relative to current nesting
-            const caseIndent = level > 0 ? level + 1 : 1;
-            return "\n" + indentChar.repeat(caseIndent) + t;
-        }
-        return t;
-    });
+        return out;
+    };
 }
 
 function lineBreakRule({ linesBetweenQueries = 1 }) {
@@ -247,6 +328,46 @@ function spacingRule() {
         if (t === ")") return ")";
         return t;
     });
+}
+
+function normalizeWhitespaceRule() {
+    return tokens => {
+        const out = [];
+        for (let i = 0; i < tokens.length; i++) {
+            const t = tokens[i];
+
+            // Collapse consecutive newlines
+            if (t === "\n" && out[out.length - 1] === "\n") {
+                continue;
+            }
+
+            // Drop a space immediately after a newline
+            if (t === " " && out[out.length - 1] === "\n") {
+                continue;
+            }
+
+            // Drop a space immediately before a newline
+            if (t === "\n" && out[out.length - 1] === " ") {
+                out.pop();
+                out.push("\n");
+                continue;
+            }
+
+            // Drop a space before "(" if preceded by newline or indent
+            if (
+                t === "(" &&
+                out[out.length - 1] === " " &&
+                (out[out.length - 2] === "\n" || (out[out.length - 2] || "").trim() === "")
+            ) {
+                out.pop(); // remove the space
+                out.push("(");
+                continue;
+            }
+
+            out.push(t);
+        }
+        return out;
+    };
 }
 
 function render(tokens) {

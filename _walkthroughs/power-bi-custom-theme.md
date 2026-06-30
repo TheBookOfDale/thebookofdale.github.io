@@ -1,19 +1,12 @@
 ---
-layout: post
+layout: page
 title: "Creating a Custom Power BI Theme: Aligning Reports with Your Brand"
-date: 2025-10-01 09:00:00 -0400
-published: true
-categories: [Analytics, Power BI, Branding]
-tags: [Power BI, Themes, Branding, Templates, UX]
 description: "Learn how to create a custom Power BI theme with JSON, colors, fonts, and filter pane settings to align reports with your brand."
+icon: fas fa-terminal
+permalink: /walkthroughs/power-bi-custom-theme/
 image:
   path: /assets/images/posts/power-bi-theme/power-bi-theme.png
-  alt: Power BI theme JSON with branded colors
-permalink: /posts/power-bi-custom-theme/
-series: team-enablement-branding
-pin: false
-comments: true
-show_image_in_post: true
+  alt: "Power BI theme JSON with branded colors"
 ---
 
 One of the fastest ways to elevate the professionalism of your Power BI reports is by applying a **custom theme**. A theme ensures that every chart, KPI card, and table reflects your organization’s identity — from the color palette to the typography — creating consistency and credibility across reports.  

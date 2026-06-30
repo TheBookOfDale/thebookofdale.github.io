@@ -1,19 +1,12 @@
 ---
-layout: post
+layout: page
 title: "Power BI Report Templates: Why Standardization Matters for Teams"
-date: 2025-09-30 21:15:00 -0400
-published: true
-categories: [Analytics, Power BI, Leadership]
-tags: [Power BI, Report Templates, Branding, Reporting Standards, Team Leadership]
 description: "Learn how to establish Power BI report templates that reinforce branding, improve consistency, and scale reporting across your team."
+icon: fas fa-terminal
+permalink: /walkthroughs/power-bi-report-templates/
 image:
   path: /assets/images/posts/report-templates/report-templates-thumb-post.png
   alt: "Power BI report templates with corporate branding and standardized layouts"
-permalink: /posts/power-bi-report-templates/
-series: team-enablement-branding
-pin: false
-comments: true
-show_image_in_post: false
 ---
 
 👉 Next in this series: [Creating a Custom Power BI Theme: Aligning Reports with Your Brand](/posts/power-bi-custom-theme/)  

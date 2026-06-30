@@ -1,18 +1,12 @@
 ---
-layout: post
+layout: page
 title: "Power BI Bookmarks: Interactive Storytelling and Navigation"
-date: 2025-10-03 12:30:00 -0400
-published: true
-categories: [Analytics, Power BI, UX]
-tags: [Power BI, Bookmarks, Interactive Dashboards, Storytelling, User Experience]
 description: "Learn how to use Power BI Bookmarks to create interactive storytelling, guided navigation, and app-like dashboards that engage users."
+icon: fas fa-terminal
+permalink: /walkthroughs/power-bi-bookmarks/
 image:
   path: /assets/images/posts/power-bi-bookmarks/bookmarks-thumb.png
   alt: "Power BI Bookmarks for interactive storytelling and guided navigation"
-permalink: /posts/power-bi-bookmarks/
-pin: false
-comments: true
-show_image_in_post: true
 ---
 
 Power BI Bookmarks are one of the most powerful tools for creating interactive, user-driven experiences within dashboards. They allow you to capture the current state of a report page—including filters, slicers, visuals, and drill-throughs—and return to it with a single click. Bookmarks work best when combined with a strong visual foundation — [custom themes](/posts/power-bi-custom-theme/) for colors and fonts, and [backgrounds/icons](/posts/power-bi-backgrounds-icons/) for layout and navigation cues.

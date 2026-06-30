@@ -52,65 +52,138 @@ Structured Data: BlogPosting schema for SEO
 
 ## 📊 You’re Leading an Analytics Team—Now What?
 
-So, you’ve been tasked with leading an analytics team. Congratulations! Whether you’ve been promoted internally or brought in from another role, the first instinct might be to dive headfirst into dashboards, reports, and data models. After all, that’s probably what you’ve been doing up until now.
+You’ve just been asked to lead an analytics team. Maybe you were promoted. Maybe you were hired to fix something. Maybe you inherited a mess.
 
-But here’s the catch: if you start there, you may be skipping the most critical step—building a scalable, collaborative foundation for analytics to thrive.
+Most new analytics leaders make the same mistake:  
+They start with dashboards, reports, and data models — the work they’re familiar with.
+
+But that’s how you accidentally **reinforce the chaos you inherited**.
+
+If you want your team to succeed, you don’t start with data.  
+You start with **structure**.
 
 ---
 
 ## 🧱 Start with Structure, Not Just Data
 
-Before you get lost in the numbers, take a step back and architect the environment your team will operate in. A strong data foundation isn’t just about clean tables and good visuals—it’s about governance, collaboration, and repeatability.
+Your first job as an analytics leader isn’t producing insights — it’s building the **environment where insights can be requested, created, shared, governed, and evolved**.
+
+A strong analytics foundation is not just clean tables and good visuals. It’s:
+
+- governance  
+- collaboration  
+- intake discipline  
+- lifecycle clarity  
+- repeatability  
+- shared expectations  
+
+Dashboards don’t fix dysfunction.  
+Structure does.
 
 ---
 
-## 🛠️ Leverage the Microsoft Stack
+## 🏛️ Build the Operating Environment Your Team Will Live In
 
-If your organization is already embedded in the Microsoft ecosystem, you’ve got powerful tools at your fingertips. Use them to build a centralized, cloud-based hub for your team.
+Every analytics team needs a **home** — a centralized place where work happens, decisions are made, and knowledge is stored.
 
-### 🔗 Create a Microsoft Team and SharePoint Site
+The specific tools don’t matter.  
+What matters is the **system** you create.
 
-**Why it matters**: Creating a Microsoft Team automatically provisions a SharePoint site, giving you a collaborative workspace with built-in version control and cloud storage.
+Your environment should include:
 
-**What to include**:
-- A document library for policies, procedures, and templates
-- SharePoint lists for tracking requests, feedback, and intake forms
-- PowerApps integration to turn those lists into dynamic, user-friendly forms
+### **A shared workspace**
 
----
+A single place where your team collaborates, stores artifacts, manages requests, and documents decisions.
 
-### 📁 Document Your Operating Model
+### **A knowledge base**
 
-Set expectations early by documenting how your team will manage analytics assets and workflows. Consider including:
+Policies, procedures, templates, naming conventions, access guidelines, and lifecycle rules — all in one place.
 
-- Power BI Workspace administration guidelines  
-- Report lifecycle management (from request to retirement)  
-- Analytics lifecycle management (from exploration to production)  
-- Governance policies for naming conventions, access control, and versioning  
+### **A request and intake system**
 
----
+A structured way for the business to ask for work, provide feedback, and understand priorities.
 
-### 📊 Build a Report Repository
+### **A governed repository for analytics assets**
 
-Create a centralized space for published reports and dashboards. Use a standard template to ensure consistency in branding, layout, and metadata. This not only improves user experience but also reinforces trust in your team’s outputs.
+Reports, dashboards, datasets, and models — all cataloged, versioned, and consistently branded.
+
+The tools you choose are just implementation details.  
+The **operating model** is the real product.
 
 ---
 
-### ⚙️ Automate Where You Can
+## 📁 Document Your Operating Model
 
-Integrate PowerApps with SharePoint lists to streamline intake, feedback, and support processes. Whether it’s a request form for new reports or a feedback loop for existing dashboards, automation reduces friction and improves responsiveness.
+Your operating model is the contract between your team and the organization.
+
+Document it early.  
+Document it clearly.  
+Document it publicly.
+
+Include:
+
+- **Intake governance** — how work enters the team  
+- **Analytics lifecycle** — exploration → development → production → retirement  
+- **Report lifecycle** — request → build → publish → maintain → sunset  
+- **Naming conventions** — predictable, searchable, consistent  
+- **Access control** — who gets what and why  
+- **Versioning rules** — how changes are made, tracked, and communicated  
+- **Quality standards** — what “production-ready” actually means  
+
+This is how you prevent your team from becoming a ticket queue.  
+This is how you become a strategic partner.
+
+---
+
+## 📊 Build a Report & Asset Repository
+
+A centralized repository does three things:
+
+1. **Creates trust** — people know where to find the truth  
+2. **Creates consistency** — every report looks and behaves the same  
+3. **Creates efficiency** — your team stops reinventing the wheel  
+
+Use templates.  
+Use metadata.  
+Use standard layouts.  
+Use consistent branding.
+
+Your team’s outputs should feel like they come from **one system**, not six individuals.
+
+---
+
+## ⚙️ Automate the Friction Out of the System
+
+Automation isn’t about tools — it’s about **removing drag**.
+
+Automate:
+
+- intake  
+- feedback  
+- approvals  
+- publishing  
+- documentation  
+- notifications  
+- quality checks  
+
+Anything that happens more than twice should be automated.  
+Your team’s time should go toward thinking, not clicking.
 
 ---
 
 ## 💡 Final Thought
 
-Leading an analytics team isn’t just about producing insights—it’s about enabling a system where insights can be requested, created, shared, and evolved. Start with structure. Build with intention. And let the data follow.
+Leading an analytics team isn’t about dashboards.  
+It’s about building the **system** that makes dashboards possible.
+
+Structure is the multiplier.  
+Build it first, and everything your team produces becomes more valuable.
 
 ---
 
 ## 🔗 Series: Team Enablement & Branding
 
-- [You’re Leading an Analytics Team—Now What?](/posts/analytics-team-lead-foundation/) ← *You are here*
-- [Power BI Report Templates: Why Standardization Matters for Teams](/posts/power-bi-report-templates/)
-- [Creating a Custom Power BI Theme: Aligning Reports with Your Brand](/posts/power-bi-custom-theme/)
-- [Power BI Backgrounds and Icons: Design with PowerPoint](/posts/power-bi-backgrounds-icons/)
+- **You’re Leading an Analytics Team—Now What?** ← *You are here*  
+- [Power BI Report Templates: Why Standardization Matters for Teams](/walkthroughs/power-bi-report-templates/)  
+- [Creating a Custom Power BI Theme: Aligning Reports with Your Brand](/walkthroughs/power-bi-custom-theme/)  
+- [Power BI Backgrounds and Icons: Design with PowerPoint](/walkthroughs/power-bi-backgrounds-icons/)

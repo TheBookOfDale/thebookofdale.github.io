@@ -1,19 +1,12 @@
 ---
-layout: post
+layout: page
 title: "PBIX vs PBIP: Choosing the Right Power BI File Format"
-date: 2025-10-20 14:00:00 -0400
-published: false
-categories: [Analytics, Power BI, Development]
-tags: [Power BI, PBIX, PBIP, Version Control, Collaboration]
 description: "Understand the key differences between PBIX and PBIP file formats in Power BI, and when to use each for development, collaboration, and deployment."
+icon: fas fa-terminal
+permalink: /walkthroughs/pbix-vs-pbip/
 image:
   path: /assets/images/posts/pbix-vs-pbip/pbix-pbip-compare.png
   alt: "PBIX vs PBIP file structure comparison"
-permalink: /posts/pbix-vs-pbip/
-series: Manufacturing Analytics Foundations
-pin: false
-comments: true
-show_image_in_post: true
 ---
 
 <!--

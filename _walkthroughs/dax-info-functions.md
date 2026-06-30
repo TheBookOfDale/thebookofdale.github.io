@@ -1,19 +1,12 @@
 ---
-layout: post
+layout: page
 title: "Surfacing Power BI Model Metadata with INFO Functions"
-date: 2025-10-20 12:20:00 -0400
-published: true
-categories: [Analytics, Power BI, DAX]
-tags: [Power BI, DAX, Metadata, Data Modeling, Governance]
 description: "Use INFO.TABLES, INFO.COLUMNS, INFO.RELATIONSHIPS, and INFO.MEASURES to expose model metadata directly in Power BI for documentation, QA, and governance."
+icon: fas fa-terminal
+permalink: /walkthroughs/info-functions-metadata/
 # image:
 #   path: /assets/images/posts/info-functions/info-functions-overview.png
 #   alt: "Power BI INFO functions metadata table example"
-permalink: /posts/info-functions-metadata/
-series: Manufacturing Analytics Foundations
-pin: false
-comments: true
-show_image_in_post: true
 ---
 
 <!--

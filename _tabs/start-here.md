@@ -6,46 +6,113 @@ order: 1
 permalink: /start-here/
 ---
 
-Welcome to **Leading with Data** — *The Data‑Driven Leader’s guide to building and empowering analytics teams with Microsoft technologies, governance, and enablement.*
+## Leading with Data
 
-Whether you’re a new manager stepping into analytics leadership for the first time, or a seasoned leader taking on a new team, this site is designed to help you build **clarity, consistency, and confidence**.
+Modern analytics teams don’t fail because of tools — they fail because of unclear processes, unclear decision rights, and unclear operating models.  
 
----
+**Leading with Data** is my approach to building analytics teams that deliver consistent, trusted, business‑aligned value.
 
-## 🎯 What You’ll Find Here
-- **Practical walkthroughs**: SQL and Power BI examples you can adapt directly to your team’s work.  
-- **Team enablement strategies**: How to set mission, vision, values, and goals that stick.  
-- **Governance and scalability**: Frameworks for data quality, security, and sustainable growth.  
-- **Leadership insights**: Lessons learned from leading analytics teams in complex environments.  
+This page is your orientation to the philosophy, frameworks, and practical resources that shape everything on this site.
 
 ---
 
-## 🚀 Where to Begin
-{% assign series_posts = site.posts | where: "series", "team-enablement-branding" | sort: "date" %}
-<ul>
-  {% for post in series_posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <span class="post-date">({{ post.date | date: "%b %d, %Y" }})</span>
-    </li>
-  {% endfor %}
-</ul>
-<!-- 1. **[Manufacturing Analytics Foundations Series](/series/manufacturing-analytics-foundations/)**  
-   Learn how to design realistic hierarchies, build reusable date tables, and create polished Power BI reports.  
+## My Core Principles
 
-2. **[Defining Your Team’s Mission, Vision, and Values](/posts/team-mvv/)**  
-   A practical guide to aligning your analytics team’s purpose with organizational strategy.  
+### **Process‑First Data Strategy**
+Fix the business process, and the data stabilizes.  
+Fix the data, and the process stays broken.  
+This principle guides how I design systems, models, and analytics workflows.
 
-3. **[Data Governance for Leaders](/posts/data-governance-leaders/)**  
-   Why governance isn’t just compliance — it’s the backbone of trust and scalability.   -->
+### **Operating‑Model Clarity**
+Analytics teams thrive when they know:
+- what they own  
+- how work enters the system  
+- how priorities are set  
+- how decisions are made  
+- how value is measured  
+
+Clarity is the foundation of scale.
+
+### **Decision Intelligence**
+Analytics exists to improve decisions — not dashboards.  
+Every model, report, and workflow should tie back to a decision the business needs to make reliably.
+
+### **Systems Thinking**
+Data problems are rarely isolated.  
+They’re symptoms of upstream friction, broken processes, unclear roles, or missing feedback loops.  
+Solving them requires seeing the whole system.
 
 ---
 
-## 📬 Stay Connected
-- Subscribe for updates on new posts and series.  
-- Explore the [full archive](/archives/) for all topics.  
-- Share your thoughts in the comments — this site is built for conversation as much as instruction.  
+## What You’ll Find on This Site
+
+### **Frameworks**
+Strategic models for building high‑functioning analytics teams:
+- Process‑First Data Strategy  
+- System‑First vs. Process‑First  
+- Operating‑Model Clarity Framework  
+- Decision Intelligence for Analytics Teams  
+
+Each framework includes practical guidance you can apply immediately.
+
+### **Walkthroughs**
+Hands‑on examples that demonstrate how I build:
+- SQL modeling patterns  
+- SQL performance tuning  
+- Power BI modeling  
+- Semantic layer design  
+- Governance and workspace strategy  
+
+These walkthroughs show the technical depth behind the philosophy.
+
+### **Tools**
+Utilities that support analytics workflows:
+- SQL Formatter  
+- Text Splitter  
+- XSLT Transformer  
+- Additional tools coming soon  
+
+These reinforce the ability to build systems, not just talk about them.
+
+### **Articles**
+Short, actionable insights on:
+- analytics leadership  
+- team enablement  
+- governance  
+- systems thinking  
+- decision intelligence  
+
+These posts connect the frameworks to real‑world leadership.
 
 ---
 
-*Leading with Data is here to help you grow as a leader, not just a technologist. Start with the foundations, then dive into the areas that matter most to your team.*
+## Where to Begin
+
+If you’re new here, start with these:
+
+1. **Process‑First Data Strategy**  
+   The foundation of everything else.
+   **Read the full framework →** [/frameworks/process-first-data-strategy/](/frameworks/process-first-data-strategy/)
+
+2. **Operating‑Model Clarity**  
+   How analytics teams should actually function.
+
+3. **Decision Intelligence**  
+   Why analytics exists — and how to align your work to decisions.
+
+4. **Walkthroughs**  
+   See how the philosophy translates into SQL, Power BI, and modeling.
+
+5. **Tools**  
+   Explore utilities that support your workflows.
+
+---
+
+## Stay Connected
+
+- Browse the full archive of articles  
+- Explore the frameworks  
+- Try the tools  
+- Connect with me on LinkedIn  
+
+This site is built to help you grow as a leader — not just a technologist.
