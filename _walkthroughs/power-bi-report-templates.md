@@ -9,7 +9,7 @@ image:
   alt: "Power BI report templates with corporate branding and standardized layouts"
 ---
 
-👉 Next in this series: [Creating a Custom Power BI Theme: Aligning Reports with Your Brand](/posts/power-bi-custom-theme/)  
+👉 Next in this series: [Creating a Custom Power BI Theme: Aligning Reports with Your Brand](/walkthroughs/power-bi-custom-theme/)  
 
 ---
 ![Standardized report templates with corporate branding](/assets/images/posts/report-templates/report-templates-thumb.png)
@@ -18,7 +18,7 @@ When you step into a new leadership role — whether you’re joining an existin
 
 Reports are more than numbers on a page. They’re the language your team uses to communicate performance, progress, and priorities. Without consistency, that language quickly becomes fragmented, and the story gets lost.
 
-Once you’ve set the foundation with templates, the next step is to create a [create a custome Power BI theme](/posts/power-bi-custom-theme/) so your visuals align with your brand colors and fonts.
+Once you’ve set the foundation with templates, the next step is to create a [create a custome Power BI theme](/walkthroughs/power-bi-custom-theme/) so your visuals align with your brand colors and fonts.
 
 ---
 
@@ -48,7 +48,7 @@ A good measure of whether your templates are effective is whether they **reflect
 
 These design choices may seem cosmetic, but they send a powerful signal: *this work is official, reliable, and aligned with the organization’s values*.
 
-You can reinforce this by [designing Power BI backgrounds and icons in PowerPoint](/posts/power-bi-backgrounds-icons/) to extend branding into every report page.
+You can reinforce this by [designing Power BI backgrounds and icons in PowerPoint](/walkthroughs/power-bi-backgrounds-icons/) to extend branding into every report page.
 
 ---
 
@@ -129,6 +129,6 @@ A **theme** controls colors and fonts, while a **template** includes layout, vis
 ## 🔗 Series: Team Enablement & Branding
 
 - [You’re Leading an Analytics Team—Now What?](/posts/analytics-team-lead-foundation/)
-- [Power BI Report Templates: Why Standardization Matters for Teams](/posts/power-bi-report-templates/) ← *You are here*
-- [Creating a Custom Power BI Theme: Aligning Reports with Your Brand](/posts/power-bi-custom-theme/)
-- [Power BI Backgrounds and Icons: Design with PowerPoint](/posts/power-bi-backgrounds-icons/)
+- [Power BI Report Templates: Why Standardization Matters for Teams](/walkthroughs/power-bi-report-templates/) ← *You are here*
+- [Creating a Custom Power BI Theme: Aligning Reports with Your Brand](/walkthroughs/power-bi-custom-theme/)
+- [Power BI Backgrounds and Icons: Design with PowerPoint](/walkthroughs/power-bi-backgrounds-icons/)

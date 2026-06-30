@@ -34,19 +34,19 @@ It helps enable rich results in search.
       "url": "https://thebookofdale.github.io/assets/images/logo.png"
     }
   },
-  "url": "https://thebookofdale.github.io/posts/power-bi-backgrounds-icons/",
+  "url": "https://thebookofdale.github.io/walkthroughs/power-bi-backgrounds-icons/",
   "datePublished": "2025-10-03T09:00:00-04:00",
   "dateModified": "2025-10-07T15:47:10-04:00",
   "articleSection": ["Analytics", "Power BI", "Branding"],
   "keywords": ["Power BI", "Report Backgrounds", "Custom Icons", "PowerPoint", "Branding", "Templates"],
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://thebookofdale.github.io/posts/power-bi-backgrounds-icons/"
+    "@id": "https://thebookofdale.github.io/walkthroughs/power-bi-backgrounds-icons/"
   }
 }
 </script>
 
-Once you’ve established a **report template** and a **custom theme**, the next step in building a professional reporting ecosystem is to create **template objects** — reusable backgrounds and icons. These elements give your reports polish, consistency, and a sense of identity that aligns with your organization’s brand and builds on your [report templates](/posts/power-bi-report-templates/) and [custom theme](/posts/power-bi-custom-theme/) to complete a cohesive design system.
+Once you’ve established a **report template** and a **custom theme**, the next step in building a professional reporting ecosystem is to create **template objects** — reusable backgrounds and icons. These elements give your reports polish, consistency, and a sense of identity that aligns with your organization’s brand and builds on your [report templates](/walkthroughs/power-bi-report-templates/) and [custom theme](/walkthroughs/power-bi-custom-theme/) to complete a cohesive design system.
 
 ---
 
@@ -127,7 +127,7 @@ For this example, we’ll design navigation icons that fit neatly into the **60�
 - Use icons as **buttons** for bookmarks, navigation, or tooltips.  
 - Combine with your **custom theme** so visuals, colors, and layout all align. 
 
-Pairing icons with [Power BI Bookmarks](/posts/power-bi-bookmarks/) allows you to create interactive navigation that feels app‑like. 
+Pairing icons with [Power BI Bookmarks](/walkthroughs/power-bi-bookmarks/) allows you to create interactive navigation that feels app‑like. 
 
 ---
 
@@ -223,6 +223,6 @@ They provide visual structure, reinforce branding, and make dashboards feel poli
 ## 🔗 Series: Team Enablement & Branding
 
 - [You’re Leading an Analytics Team—Now What?](/posts/analytics-team-lead-foundation/)
-- [Power BI Report Templates: Why Standardization Matters for Teams](/posts/power-bi-report-templates/)
-- [Creating a Custom Power BI Theme: Aligning Reports with Your Brand](/posts/power-bi-custom-theme/)
-- [Power BI Backgrounds and Icons: Design with PowerPoint](/posts/power-bi-backgrounds-icons/) ← *You are here*
+- [Power BI Report Templates: Why Standardization Matters for Teams](/walkthroughs/power-bi-report-templates/)
+- [Creating a Custom Power BI Theme: Aligning Reports with Your Brand](/walkthroughs/power-bi-custom-theme/)
+- [Power BI Backgrounds and Icons: Design with PowerPoint](/walkthroughs/power-bi-backgrounds-icons/) ← *You are here*

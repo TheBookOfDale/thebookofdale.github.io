@@ -205,6 +205,6 @@ You’re not just writing SQL—you’re modeling the operating system of the bu
 
 ## Related walkthroughs
 
-- [Date Table](/walkthroughs/date-table/)  
-- [Report Templates](/walkthroughs/report-templates/)  
+- [Date Table](/walkthroughs/date-table-sql/)  
+- [Report Templates](/walkthroughs/power-bi-report-templates/)  
 - [PBIX vs PBIP](/walkthroughs/pbix-vs-pbip/)

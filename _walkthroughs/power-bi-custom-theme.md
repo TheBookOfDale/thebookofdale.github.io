@@ -15,7 +15,7 @@ One of the fastest ways to elevate the professionalism of your Power BI reports 
 
 In this post, I’ll show you how to build a custom theme from scratch — using **Contoso Manufacturing** as an example — so your reports align seamlessly with your brand.
 
-If you haven’t already, start by [establishing report templates](/posts/power-bi-report-templates/) to give your team a consistent reporting framework.
+If you haven’t already, start by [establishing report templates](/walkthroughs/power-bi-report-templates/) to give your team a consistent reporting framework.
 
 ---
 
@@ -140,7 +140,7 @@ Finally, the **Page** tab controls the canvas itself:
 
 For Contoso, we kept the background white (`#FFFFFF`) for clarity, but added a subtle gray wallpaper with 5% transparency to give reports a professional, branded feel without distracting from the data.
 
-For more advanced layouts, you can [design custom backgrounds and icons in PowerPoint](/posts/power-bi-backgrounds-icons/) and apply them instead of or in addition to what is set here.
+For more advanced layouts, you can [design custom backgrounds and icons in PowerPoint](/walkthroughs/power-bi-backgrounds-icons/) and apply them instead of or in addition to what is set here.
 
 > 💡 **Tip:** Keep page backgrounds subtle. High‑contrast or busy images can make charts hard to read.
 
@@ -200,7 +200,7 @@ A theme only delivers value if it’s used consistently. To embed it into your t
 
 By applying the theme across all reports, you ensure every dashboard feels like part of the same brand story — professional, consistent, and credible.
 
-Once your theme is in place, you can enhance interactivity by [using Power BI Bookmarks for storytelling and navigation](/posts/power-bi-bookmarks/)
+Once your theme is in place, you can enhance interactivity by [using Power BI Bookmarks for storytelling and navigation](/walkthroughs/power-bi-bookmarks/)
 
 ---
 
@@ -309,6 +309,6 @@ In the **Customize Theme → Filter Pane** section, you can set background, text
 ## 🔗 Series: Team Enablement & Branding
 
 - [You’re Leading an Analytics Team—Now What?](/posts/analytics-team-lead-foundation/)
-- [Power BI Report Templates: Why Standardization Matters for Teams](/posts/power-bi-report-templates/)
-- [Creating a Custom Power BI Theme: Aligning Reports with Your Brand](/posts/power-bi-custom-theme/) ← *You are here*
-- [Power BI Backgrounds and Icons: Design with PowerPoint](/posts/power-bi-backgrounds-icons/)
+- [Power BI Report Templates: Why Standardization Matters for Teams](/walkthroughs/power-bi-report-templates/)
+- [Creating a Custom Power BI Theme: Aligning Reports with Your Brand](/walkthroughs/power-bi-custom-theme/) ← *You are here*
+- [Power BI Backgrounds and Icons: Design with PowerPoint](/walkthroughs/power-bi-backgrounds-icons/)

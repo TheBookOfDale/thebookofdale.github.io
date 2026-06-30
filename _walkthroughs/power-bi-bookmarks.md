@@ -5,11 +5,11 @@ description: "Learn how to use Power BI Bookmarks to create interactive storytel
 icon: fas fa-terminal
 permalink: /walkthroughs/power-bi-bookmarks/
 image:
-  path: /assets/images/posts/power-bi-bookmarks/bookmarks-thumb.png
+  path: /assets/images/walkthroughs/power-bi-bookmarks/bookmarks-thumb.png
   alt: "Power BI Bookmarks for interactive storytelling and guided navigation"
 ---
 
-Power BI Bookmarks are one of the most powerful tools for creating interactive, user-driven experiences within dashboards. They allow you to capture the current state of a report page—including filters, slicers, visuals, and drill-throughs—and return to it with a single click. Bookmarks work best when combined with a strong visual foundation — [custom themes](/posts/power-bi-custom-theme/) for colors and fonts, and [backgrounds/icons](/posts/power-bi-backgrounds-icons/) for layout and navigation cues.
+Power BI Bookmarks are one of the most powerful tools for creating interactive, user-driven experiences within dashboards. They allow you to capture the current state of a report page—including filters, slicers, visuals, and drill-throughs—and return to it with a single click. Bookmarks work best when combined with a strong visual foundation — [custom themes](/walkthroughs/power-bi-custom-theme/) for colors and fonts, and [backgrounds/icons](/walkthroughs/power-bi-backgrounds-icons/) for layout and navigation cues.
 
 ---
 
@@ -34,7 +34,7 @@ In my dashboards, I use bookmarks to:
 
 Bookmarks paired with buttons and selection panes create a seamless experience that feels more like an app than a static report.
 
-For example, a branded [report template](/posts/power-bi-report-templates/) ensures consistency, while bookmarks add the interactivity on top.
+For example, a branded [report template](/walkthroughs/power-bi-report-templates/) ensures consistency, while bookmarks add the interactivity on top.
 
 ---
 
