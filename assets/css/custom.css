@@ -1,3 +1,12 @@
-#sidebar .profile-wrapper .site-subtitle {
-  margin-bottom: calc(0.5rem + 0.25em);
+#sidebar .site-subtitle {
+    font-size: 95%;
+    color: var(--site-subtitle-color);
+    margin-top: .25rem;
+    word-spacing: 1px;
+    user-select: none;
+
+    height: auto !important;
+    white-space: normal !important;
+    margin-bottom: 1rem !important;
+    line-height: 1.3;
 }
