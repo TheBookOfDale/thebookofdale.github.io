@@ -99,6 +99,13 @@
 
     <script src="{{ '/assets/js/dist/theme.min.js' | relative_url }}"></script>
 
+    <!-- Force theme-mode when hard-coded in _config.yml -->
+    {% if site.theme_mode %}
+    <script>
+        localStorage.setItem("theme-mode", "{{ site.theme_mode }}");
+    </script>
+    {% endif %}
+
     {% include js-selector.html lang=lang %}
 
     {% if jekyll.environment == 'production' %}
