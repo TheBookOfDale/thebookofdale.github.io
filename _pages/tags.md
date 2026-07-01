@@ -1,6 +1,5 @@
 ---
-layout: page
+layout: tags
 title: Tags
 permalink: /tags/
 ---
-{% include tags.html %}
