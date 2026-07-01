@@ -58,6 +58,28 @@
     {% endif %}
     {% endunless %}
 
+    <!--
+      Hidden DOM stub for Chirpy theme-mode initialization.
+
+      Why this exists:
+      ----------------
+      When `theme_mode` is set to 'light' or 'dark', Chirpy hides the theme
+      dropdown UI. However, the theme JavaScript still expects the dropdown
+      container with id="theme-switch" to exist in the DOM.
+
+      Without this stub:
+        - `document.getElementById("theme-switch")` returns null
+        - The script calls `.querySelectorAll()` on null
+        - This throws a TypeError in home.min.js
+        - Theme initialization aborts
+        - Dark mode never applies
+        - The site defaults to light mode everywhere
+
+      This stub provides the expected DOM node without showing any UI.
+      It prevents the JS crash and allows hard-coded theme_mode to work.
+    -->
+    <div id="theme-switch" style="display:none;"></div>
+
     {% for entry in site.data.contact %}
     {%- assign url = null -%}
 
