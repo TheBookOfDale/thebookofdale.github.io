@@ -25,82 +25,110 @@
 
   <nav class="flex-column flex-grow-1 w-100 ps-0">
     <ul class="nav">
-      <!-- home -->
-      <!-- <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
-        <a href="{{ '/' | relative_url }}" class="nav-link">
-          <i class="fa-fw fas fa-home"></i>
-          <span>{{ site.data.locales[include.lang].tabs.home | upcase }}</span>
-        </a>
-      </li> -->
-      <!-- the real tabs -->
       {% for tab in site.tabs %}
       <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
         <a href="{{ tab.url | relative_url }}" class="nav-link">
           <i class="fa-fw {{ tab.icon }}"></i>
           {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
-
           <span>{{ site.data.locales[include.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
         </a>
       </li>
-      <!-- .nav-item -->
       {% endfor %}
     </ul>
   </nav>
 
-  <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
-    {% unless site.theme_mode %}
-    <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
-      <i class="fas fa-adjust"></i>
-    </button>
+  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
+
+    {% comment %}
+    --------------------------------------------------------------------
+    THEME TOGGLE BLOCK (MODERN CHIRPY VERSION)
+    --------------------------------------------------------------------
+    - If theme_mode is NOT set → show the dropdown toggle normally.
+    - If theme_mode IS set (light/dark) → hide the toggle UI but still
+    render the DOM so Chirpy’s JS does not crash.
+    --------------------------------------------------------------------
+    {% endcomment %}
+
+    {% if site.theme_mode %}
+    <!-- Hard-coded theme mode: hide the UI but keep DOM for JS -->
+    <div id="theme-switch" class="btn-group dropup" style="display:none;">
+      <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle"
+        data-bs-toggle="dropdown">
+        <i class="fa-regular fa-sun" data-theme-mode="light"></i>
+        <i class="fa-regular fa-moon" data-theme-mode="dark"></i>
+        <i class="fa-solid fa-display" data-theme-mode="system"></i>
+      </button>
+
+      <ul class="dropdown-menu rounded-3 mb-1 p-1">
+        <li>
+          <button class="dropdown-item d-flex align-items-center" type="button" data-theme-mode="light">
+            <i class="fa-regular fa-sun"></i> Light
+          </button>
+        </li>
+        <li>
+          <button class="dropdown-item d-flex align-items-center" type="button" data-theme-mode="dark">
+            <i class="fa-regular fa-moon"></i> Dark
+          </button>
+        </li>
+        <li>
+          <button class="dropdown-item d-flex align-items-center" type="button" data-theme-mode="system">
+            <i class="fa-solid fa-display"></i> System
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    {% else %}
+    <!-- No hard-coded theme: show full toggle UI -->
+    <div id="theme-switch" class="btn-group dropup">
+      <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle"
+        data-bs-toggle="dropdown">
+        <i class="fa-regular fa-sun" data-theme-mode="light"></i>
+        <i class="fa-regular fa-moon" data-theme-mode="dark"></i>
+        <i class="fa-solid fa-display" data-theme-mode="system"></i>
+      </button>
+
+      <ul class="dropdown-menu rounded-3 mb-1 p-1">
+        <li>
+          <button class="dropdown-item d-flex align-items-center" type="button" data-theme-mode="light">
+            <i class="fa-regular fa-sun"></i> Light
+          </button>
+        </li>
+        <li>
+          <button class="dropdown-item d-flex align-items-center" type="button" data-theme-mode="dark">
+            <i class="fa-regular fa-moon"></i> Dark
+          </button>
+        </li>
+        <li>
+          <button class="dropdown-item d-flex align-items-center" type="button" data-theme-mode="system">
+            <i class="fa-solid fa-display"></i> System
+          </button>
+        </li>
+      </ul>
+    </div>
+    {% endif %}
 
     {% if site.data.contact.size > 0 %}
     <span class="icon-border"></span>
     {% endif %}
-    {% endunless %}
-
-    <!--
-      Hidden DOM stub for Chirpy theme-mode initialization.
-
-      Why this exists:
-      ----------------
-      When `theme_mode` is set to 'light' or 'dark', Chirpy hides the theme
-      dropdown UI. However, the theme JavaScript still expects the dropdown
-      container with id="theme-switch" to exist in the DOM.
-
-      Without this stub:
-        - `document.getElementById("theme-switch")` returns null
-        - The script calls `.querySelectorAll()` on null
-        - This throws a TypeError in home.min.js
-        - Theme initialization aborts
-        - Dark mode never applies
-        - The site defaults to light mode everywhere
-
-      This stub provides the expected DOM node without showing any UI.
-      It prevents the JS crash and allows hard-coded theme_mode to work.
-    -->
-    <div id="theme-switch" style="display:none;"></div>
 
     {% for entry in site.data.contact %}
     {%- assign url = null -%}
 
     {% case entry.type %}
     {% when 'github', 'twitter' %}
-    {%- unless site[entry.type].username -%}
-    {%- continue -%}
-    {%- endunless -%}
-    {%- capture url -%}
-    https://{{ entry.type }}.com/{{ site[entry.type].username }}
-    {%- endcapture -%}
+    {%- unless site[entry.type].username -%}{%- continue -%}{%- endunless -%}
+    {%- capture url -%}https://{{ entry.type }}.com/{{ site[entry.type].username }}{%- endcapture -%}
+
     {% when 'email' %}
-    {%- unless site.social.email -%}
-    {%- continue -%}
-    {%- endunless -%}
+    {%- unless site.social.email -%}{%- continue -%}{%- endunless -%}
     {%- assign email = site.social.email | split: '@' -%}
-    {%- capture url -%}
-    javascript:location.href = 'mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@')
-    {%- endcapture -%}
+    {%- capture url -%}javascript:location.href = 'mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@'){%-
+    endcapture -%}
+
     {% when 'rss' %}
     {% assign url = '/feed.xml' | relative_url %}
+
     {% else %}
     {% assign url = entry.url %}
     {% endcase %}
