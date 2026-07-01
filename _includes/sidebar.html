@@ -14,10 +14,8 @@
     <a class="site-title d-block" href="{{ '/' | relative_url }}">Christopher Dale</a>
     <p class="site-subtitle fst-italic mb-0">Strategic leader in analytics and operational systems</p>
     {%- else -%}
-    <a class="site-title d-block" href="{{ '/' | relative_url }}">Leading with Data</a>
-    <p class="site-subtitle fst-italic mb-0">
-      The Data‑Driven Leader’s guide to analytics teams and Microsoft technologies.
-    </p>
+    <a class="site-title d-block" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>
     {%- endif -%}
   </header>
 
